@@ -25,3 +25,7 @@ Options:
 
 - Browsersync is set to work via `localhost:8888` (MAMP) as a proxy. You can change this setting in `gulpfile.js`
 - Open http://localhost:3001 in your browser for more Browsersync settings
+
+TODO:
+
+- Explain Git-based deployment with [dploy](https://github.com/LeanMeanFightingMachine/dploy)
