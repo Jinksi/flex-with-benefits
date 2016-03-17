@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php include('inc-edit.php');?>
+<?php get_template_part('inc-edit'); ?>
 	<div class="woo-page">
 				<?php
 				if ( is_singular( 'product' ) ) {

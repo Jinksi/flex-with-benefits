@@ -5,7 +5,7 @@ Template Name: Contact page
 */
 
 get_header(); ?>
-<?php include('inc-edit.php');?>
+<?php get_template_part('inc-edit'); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
