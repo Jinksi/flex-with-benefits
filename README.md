@@ -1,4 +1,4 @@
-# Flexxx with benefits
+# Flex with benefits
 Wordpress theme for [Thrive Web](http://thriveweb.com.au).
 
 Benefits include:
