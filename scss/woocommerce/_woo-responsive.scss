@@ -1,0 +1,221 @@
+/*---- Responsive ----*/
+@media screen and (max-width: 600px) {
+  .woocommerce{
+    table{
+      /* Force table to not be like tables anymore */
+      &.shop_table,
+      &.shop_table thead,
+      &.shop_table tbody,
+      &.shop_table th,
+      &.shop_table td,
+      &.shop_table tr {
+        display: block;
+        text-align: left;
+        width: 100%;
+        font-size: 1.8rem;
+      }
+      /* Hide table headers (but not display: none;, for accessibility) */
+      &.shop_table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+      &.shop_table{
+        border: none;
+        tr {
+          /*border: 1px solid #d2d3d3; */
+        }
+        .order-total{
+          td{
+            padding-left: 0 !important;
+            font-size: 3rem;
+          }
+        }
+        td{
+          /* Behave like a "row" */
+          // border: 1px solid #d2d3d3;
+          position: relative;
+          padding-left: 40% !important;
+          &.product-spacer {
+            border-color: #FFF;
+            height: 10px;
+          }
+          &:before{
+            /* Now like a table header */
+            position: absolute;
+            /* Top/left values mimic padding */
+            top: 6px;
+            left: 6px;
+            width: 25%;
+            padding-right: 10px;
+            white-space: nowrap;
+            text-align: left;
+          }
+          /*
+          Label the data
+          */
+          &.product-remove {
+            text-align: right;
+            padding: 5px 0;
+            &:before{
+              content: "DELETE";
+            }
+          }
+          &.product-thumbnail{
+            height: 150px;
+            text-align: center;
+            a{
+              display: block;
+              height: 100%;
+            }
+            &:before{
+              content: "IMAGE";
+            }
+          }
+          &.product-name:before {
+            content: "PRODUCT";
+          }
+          &.product-price:before {
+            content: "PRICE";
+          }
+          &.product-quantity:before {
+            content: "QUANTITY";
+          }
+          &.product-subtotal:before {
+            content: "SUBTOTAL";
+          }
+          &.product-total:before {
+            content: "TOTAL";
+          }
+        }
+        tr.cart-subtotal td,
+        tr.shipping td,
+        tr.total td,
+        &.order_details tfoot th,
+        &.order_details tfoot td {
+          padding-left: 6px !important;
+          border: 0 !important;
+        }
+        table.shop_table tbody {
+          padding-top: 10px;
+        }
+        .variation{
+          clear: fix;
+        }
+      }
+    }
+
+    .quantity{
+      margin: 0;
+    }
+
+    table.cart td.actions{
+      text-align: left;
+      border: 0;
+      padding-left: 0 !important;
+      .button.alt{
+        float: left;
+        margin-top: 10px;
+      }
+      div{
+        margin-bottom: 10px;
+      }
+    }
+    .cart-collaterals{
+      clear: fix;
+      .cart_totals {
+        float: left;
+        width: 100%;
+        text-align: left;
+        th, td {
+          border: 0 !important;
+        }
+        table tr.cart-subtotal td,
+        table tr.shipping td,
+        table tr.total td {
+          padding-left: 6px !important;
+        }
+      }
+    }
+    .col2-set .col-1,
+    .col2-set .col-1,
+    .col2-set .col-2,
+    .col2-set .col-2,
+    form .form-row-first,
+    form .form-row-last,
+    form .form-row-first,
+    form .form-row-last {
+      float: none;
+      width: 100%;
+    }
+    .order_details ul,
+    .order_details ul,
+    .order_details,
+    .order_details {
+      padding: 0;
+    }
+    .order_details li,
+    .order_details li {
+      clear: left;
+      margin-bottom: 10px;
+      border: 0;
+    }
+    /* make buttons full width, text wide anyway, improves effectiveness */
+    #content table.cart td.actions .button,
+    #content table.cart td.actions .input-text,
+    #content table.cart td.actions input,
+    table.cart td.actions .button,
+    table.cart td.actions .input-text,
+    table.cart td.actions input,
+    #content table.cart td.actions .button,
+    #content table.cart td.actions .input-text,
+    #content table.cart td.actions input,
+    table.cart td.actions .button,
+    table.cart td.actions .input-text,
+    table.cart td.actions input {
+      width: 100%;
+      font-size: 12px !important;
+    }
+    tfoot {
+      display: block !important;
+    }
+    tfoot td {
+      width: 100% !important;
+      display: block !important;
+    }
+    /* keep coupon at 50% */
+    #content table.cart td.actions .coupon .button,
+    #content table.cart td.actions .coupon .input-text,
+    #content table.cart td.actions .coupon input,
+    table.cart td.actions .coupon .button,
+    table.cart td.actions .coupon .input-text,
+    table.cart td.actions .coupon input,
+    #content table.cart td.actions .coupon .button,
+    #content table.cart td.actions .coupon .input-text,
+    #content table.cart td.actions .coupon input,
+    table.cart td.actions .coupon .button,
+    table.cart td.actions .coupon .input-text,
+    table.cart td.actions .coupon input {
+      width: 48%;
+      font-size: 12px !important;
+    }
+    /* clean up how coupon inputs display */
+    #content table.cart td.actions .coupon,
+    table.cart td.actions .coupon,
+    #content table.cart td.actions .coupon,
+    table.cart td.actions .coupon {
+      margin-top: 1.5em;
+    }
+    #content table.cart td.actions .coupon .input-text,
+    table.cart td.actions .coupon .input-text,
+    #content table.cart td.actions .coupon .input-text,
+    table.cart td.actions .coupon .input-text {
+      margin-bottom: 1em;
+    }
+    /* remove cross sells, they interfere with flow between cart and cart totals + shipping calculator */
+    .cart-collaterals .cross-sells,
+    .cart-collaterals .cross-sells {
+      display: none;
+    }
+  }
+}

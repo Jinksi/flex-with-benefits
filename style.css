@@ -1,13 +1,13 @@
+@charset "UTF-8";
 /*
 Theme Name: Flexxx Theme — Jinks Remix
 Author: Thrive web design
 Author URI: http://thriveweb.com.au/
 */
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 html {
   font-family: sans-serif;
@@ -19,7 +19,7 @@ html {
 }
 
 /**
- * Remove default margin.
+ * Remove the margin in all browsers (opinionated).
  */
 body {
   margin: 0;
@@ -28,10 +28,9 @@ body {
 /* HTML5 display definitions
    ========================================================================== */
 /**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
  */
 article,
 aside,
@@ -40,32 +39,27 @@ figcaption,
 figure,
 footer,
 header,
-hgroup,
 main,
 menu,
 nav,
 section,
 summary {
+  /* 1 */
   display: block;
 }
 
 /**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ * Add the correct display in IE 9-.
  */
 audio,
 canvas,
 progress,
 video {
   display: inline-block;
-  /* 1 */
-  vertical-align: baseline;
-  /* 2 */
 }
 
 /**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
+ * Add the correct display in iOS 4-7.
  */
 audio:not([controls]) {
   display: none;
@@ -73,58 +67,80 @@ audio:not([controls]) {
 }
 
 /**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
-[hidden],
-template {
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
+ */
+template,
+[hidden] {
   display: none;
 }
 
 /* Links
    ========================================================================== */
 /**
- * Remove the gray background color from active links in IE 10.
+ * Remove the gray background on active links in IE 10.
  */
 a {
   background-color: transparent;
 }
 
 /**
- * Improve readability when focused and also mouse hovered in all browsers.
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
  */
 a:active,
 a:hover {
-  outline: 0;
+  outline-width: 0;
 }
 
 /* Text-level semantics
    ========================================================================== */
 /**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 abbr[title] {
-  border-bottom: 1px dotted;
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
 }
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
 b,
 strong {
-  font-weight: bold;
+  font-weight: inherit;
 }
 
 /**
- * Address styling not present in Safari and Chrome.
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
  */
 dfn {
   font-style: italic;
 }
 
 /**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
  */
 h1 {
   font-size: 2em;
@@ -132,22 +148,23 @@ h1 {
 }
 
 /**
- * Address styling not present in IE 8/9.
+ * Add the correct background and color in IE 9-.
  */
 mark {
-  background: #ff0;
+  background-color: #ff0;
   color: #000;
 }
 
 /**
- * Address inconsistent and variable font size in all browsers.
+ * Add the correct font size in all browsers.
  */
 small {
   font-size: 80%;
 }
 
 /**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
  */
 sub,
 sup {
@@ -157,25 +174,25 @@ sup {
   vertical-align: baseline;
 }
 
-sup {
-  top: -0.5em;
-}
-
 sub {
   bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
 }
 
 /* Embedded content
    ========================================================================== */
 /**
- * Remove border when inside `a` element in IE 8/9/10.
+ * Remove the border on images inside links in IE 10-.
  */
 img {
-  border: 0;
+  border-style: none;
 }
 
 /**
- * Correct overflow not hidden in IE 9/10/11.
+ * Hide the overflow in IE.
  */
 svg:not(:root) {
   overflow: hidden;
@@ -184,108 +201,124 @@ svg:not(:root) {
 /* Grouping content
    ========================================================================== */
 /**
- * Address margin not present in IE 8/9 and Safari.
- */
-figure {
-  margin: 1em 40px;
-}
-
-/**
- * Address differences between Firefox and other browsers.
- */
-hr {
-  box-sizing: content-box;
-  height: 0;
-}
-
-/**
- * Contain overflow in all browsers.
- */
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
  */
 code,
 kbd,
 pre,
 samp {
   font-family: monospace, monospace;
+  /* 1 */
   font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
 }
 
 /* Forms
    ========================================================================== */
 /**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
- */
-/**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ * Change font properties to `inherit` in all browsers (opinionated).
  */
 button,
 input,
-optgroup,
 select,
 textarea {
-  color: inherit;
-  /* 1 */
   font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */
 }
 
 /**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ * Restore the font weight unset by the previous rule.
  */
-button {
+optgroup {
+  font-weight: bold;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ * 2. Show the overflow in Edge, Firefox, and IE.
+ */
+button,
+input,
+select {
+  /* 2 */
   overflow: visible;
 }
 
 /**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
+ * Remove the margin in Safari.
+ * 1. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+select,
+textarea {
+  /* 1 */
+  margin: 0;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
  */
 button,
 select {
+  /* 1 */
   text-transform: none;
 }
 
 /**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
+ * Change the cursor in all browsers (opinionated).
  */
 button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
+[type="button"],
+[type="reset"],
+[type="submit"] {
   cursor: pointer;
-  /* 3 */
 }
 
 /**
- * Re-set default cursor for disabled elements.
+ * Restore the default cursor to disabled elements unset by the previous rule.
  */
-button[disabled],
-html input[disabled] {
+[disabled] {
   cursor: default;
 }
 
 /**
- * Remove inner padding and border in Firefox 4+.
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
@@ -294,62 +327,15 @@ input::-moz-focus-inner {
 }
 
 /**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
+ * Restore the focus styles unset by the previous rule.
  */
-input {
-  line-height: normal;
+button:-moz-focusring,
+input:-moz-focusring {
+  outline: 1px dotted ButtonText;
 }
 
 /**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
- */
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  /* 1 */
-  padding: 0;
-  /* 2 */
-}
-
-/**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
- */
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
- *    (include `-moz` to future-proof).
- */
-input[type="search"] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  /* 2 */
-  box-sizing: content-box;
-}
-
-/**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
- */
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
- * Define consistent border, margin, and padding.
+ * Change the border, margin, and padding in all browsers (opinionated).
  */
 fieldset {
   border: 1px solid #c0c0c0;
@@ -358,44 +344,67 @@ fieldset {
 }
 
 /**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
  */
 legend {
-  border: 0;
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
   /* 1 */
   padding: 0;
-  /* 2 */
+  /* 3 */
+  white-space: normal;
+  /* 1 */
 }
 
 /**
- * Remove default vertical scrollbar in IE 8/9/10/11.
+ * Remove the default vertical scrollbar in IE.
  */
 textarea {
   overflow: auto;
 }
 
 /**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
  */
-optgroup {
-  font-weight: bold;
-}
-
-/* Tables
-   ========================================================================== */
-/**
- * Remove most spacing between table cells.
- */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td,
-th {
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
   padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Correct the odd appearance of search inputs in Chrome and Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome on OS X and
+ * Safari on OS X.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
 }
 
 html {
@@ -1082,4 +1091,290 @@ header nav ul li a {
 
 #logo img {
   height: 100%;
+}
+
+/*---- Responsive ----*/
+@media screen and (max-width: 600px) {
+  .woocommerce {
+    /* make buttons full width, text wide anyway, improves effectiveness */
+    /* keep coupon at 50% */
+    /* clean up how coupon inputs display */
+    /* remove cross sells, they interfere with flow between cart and cart totals + shipping calculator */
+  }
+  .woocommerce table {
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  .woocommerce table.shop_table,
+  .woocommerce table.shop_table thead,
+  .woocommerce table.shop_table tbody,
+  .woocommerce table.shop_table th,
+  .woocommerce table.shop_table td,
+  .woocommerce table.shop_table tr {
+    display: block;
+    text-align: left;
+    width: 100%;
+    font-size: 1.8rem;
+  }
+  .woocommerce table.shop_table thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  .woocommerce table.shop_table {
+    border: none;
+  }
+  .woocommerce table.shop_table tr {
+    /*border: 1px solid #d2d3d3; */
+  }
+  .woocommerce table.shop_table .order-total td {
+    padding-left: 0 !important;
+    font-size: 3rem;
+  }
+  .woocommerce table.shop_table td {
+    /* Behave like a "row" */
+    position: relative;
+    padding-left: 40% !important;
+    /*
+          Label the data
+          */
+  }
+  .woocommerce table.shop_table td.product-spacer {
+    border-color: #FFF;
+    height: 10px;
+  }
+  .woocommerce table.shop_table td:before {
+    /* Now like a table header */
+    position: absolute;
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 25%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+  }
+  .woocommerce table.shop_table td.product-remove {
+    text-align: right;
+    padding: 5px 0;
+  }
+  .woocommerce table.shop_table td.product-remove:before {
+    content: "DELETE";
+  }
+  .woocommerce table.shop_table td.product-thumbnail {
+    height: 150px;
+    text-align: center;
+  }
+  .woocommerce table.shop_table td.product-thumbnail a {
+    display: block;
+    height: 100%;
+  }
+  .woocommerce table.shop_table td.product-thumbnail:before {
+    content: "IMAGE";
+  }
+  .woocommerce table.shop_table td.product-name:before {
+    content: "PRODUCT";
+  }
+  .woocommerce table.shop_table td.product-price:before {
+    content: "PRICE";
+  }
+  .woocommerce table.shop_table td.product-quantity:before {
+    content: "QUANTITY";
+  }
+  .woocommerce table.shop_table td.product-subtotal:before {
+    content: "SUBTOTAL";
+  }
+  .woocommerce table.shop_table td.product-total:before {
+    content: "TOTAL";
+  }
+  .woocommerce table.shop_table tr.cart-subtotal td,
+  .woocommerce table.shop_table tr.shipping td,
+  .woocommerce table.shop_table tr.total td,
+  .woocommerce table.shop_table.order_details tfoot th,
+  .woocommerce table.shop_table.order_details tfoot td {
+    padding-left: 6px !important;
+    border: 0 !important;
+  }
+  .woocommerce table.shop_table table.shop_table tbody {
+    padding-top: 10px;
+  }
+  .woocommerce table.shop_table .variation:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .woocommerce .quantity {
+    margin: 0;
+  }
+  .woocommerce table.cart td.actions {
+    text-align: left;
+    border: 0;
+    padding-left: 0 !important;
+  }
+  .woocommerce table.cart td.actions .button.alt {
+    float: left;
+    margin-top: 10px;
+  }
+  .woocommerce table.cart td.actions div {
+    margin-bottom: 10px;
+  }
+  .woocommerce .cart-collaterals:after{
+    content: '';
+    display: table;
+    clear: both;
+  }
+  .woocommerce .cart-collaterals .cart_totals {
+    float: left;
+    width: 100%;
+    text-align: left;
+  }
+  .woocommerce .cart-collaterals .cart_totals th, .woocommerce .cart-collaterals .cart_totals td {
+    border: 0 !important;
+  }
+  .woocommerce .cart-collaterals .cart_totals table tr.cart-subtotal td,
+  .woocommerce .cart-collaterals .cart_totals table tr.shipping td,
+  .woocommerce .cart-collaterals .cart_totals table tr.total td {
+    padding-left: 6px !important;
+  }
+  .woocommerce .col2-set .col-1,
+  .woocommerce .col2-set .col-1,
+  .woocommerce .col2-set .col-2,
+  .woocommerce .col2-set .col-2,
+  .woocommerce form .form-row-first,
+  .woocommerce form .form-row-last,
+  .woocommerce form .form-row-first,
+  .woocommerce form .form-row-last {
+    float: none;
+    width: 100%;
+  }
+  .woocommerce .order_details ul,
+  .woocommerce .order_details ul,
+  .woocommerce .order_details,
+  .woocommerce .order_details {
+    padding: 0;
+  }
+  .woocommerce .order_details li,
+  .woocommerce .order_details li {
+    clear: left;
+    margin-bottom: 10px;
+    border: 0;
+  }
+  .woocommerce #content table.cart td.actions .button,
+  .woocommerce #content table.cart td.actions .input-text,
+  .woocommerce #content table.cart td.actions input,
+  .woocommerce table.cart td.actions .button,
+  .woocommerce table.cart td.actions .input-text,
+  .woocommerce table.cart td.actions input,
+  .woocommerce #content table.cart td.actions .button,
+  .woocommerce #content table.cart td.actions .input-text,
+  .woocommerce #content table.cart td.actions input,
+  .woocommerce table.cart td.actions .button,
+  .woocommerce table.cart td.actions .input-text,
+  .woocommerce table.cart td.actions input {
+    width: 100%;
+    font-size: 12px !important;
+  }
+  .woocommerce tfoot {
+    display: block !important;
+  }
+  .woocommerce tfoot td {
+    width: 100% !important;
+    display: block !important;
+  }
+  .woocommerce #content table.cart td.actions .coupon .button,
+  .woocommerce #content table.cart td.actions .coupon .input-text,
+  .woocommerce #content table.cart td.actions .coupon input,
+  .woocommerce table.cart td.actions .coupon .button,
+  .woocommerce table.cart td.actions .coupon .input-text,
+  .woocommerce table.cart td.actions .coupon input,
+  .woocommerce #content table.cart td.actions .coupon .button,
+  .woocommerce #content table.cart td.actions .coupon .input-text,
+  .woocommerce #content table.cart td.actions .coupon input,
+  .woocommerce table.cart td.actions .coupon .button,
+  .woocommerce table.cart td.actions .coupon .input-text,
+  .woocommerce table.cart td.actions .coupon input {
+    width: 48%;
+    font-size: 12px !important;
+  }
+  .woocommerce #content table.cart td.actions .coupon,
+  .woocommerce table.cart td.actions .coupon,
+  .woocommerce #content table.cart td.actions .coupon,
+  .woocommerce table.cart td.actions .coupon {
+    margin-top: 1.5em;
+  }
+  .woocommerce #content table.cart td.actions .coupon .input-text,
+  .woocommerce table.cart td.actions .coupon .input-text,
+  .woocommerce #content table.cart td.actions .coupon .input-text,
+  .woocommerce table.cart td.actions .coupon .input-text {
+    margin-bottom: 1em;
+  }
+  .woocommerce .cart-collaterals .cross-sells,
+  .woocommerce .cart-collaterals .cross-sells {
+    display: none;
+  }
+}
+
+.woocommerce-info, .woocommerce-thankyou-order-received, .cart-empty {
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  padding: 2.5rem;
+  background-color: #cbcbcb;
+}
+
+.woocommerce-info:before, .woocommerce-thankyou-order-received:before, .cart-empty:before {
+  content: '\f05a ';
+  font-family: 'FontAwesome';
+  font-size: 3rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.woocommerce-message, .woocommerce-error {
+  padding: 2.5rem;
+  background-color: #cbcbcb;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.woocommerce-message .button, .woocommerce-error .button {
+  display: block;
+  width: 300px;
+  margin: 0 auto 1rem auto;
+}
+
+.woocommerce-message p, .woocommerce-error p {
+  margin-bottom: 0;
+}
+
+.woocommerce-error li {
+  list-style: none;
+  text-align: left;
+  max-width: 300px;
+  margin: .5rem auto;
+}
+
+.woocommerce-error li:before {
+  content: '\f06a';
+  font-family: 'FontAwesome';
+  margin-right: .5em;
+}
+
+.return-to-shop {
+  text-align: center;
+}
+
+.woocommerce-pagination ul li {
+  display: inline-block;
+}
+
+.woocommerce-pagination ul li a {
+  padding: .2rem;
+}
+
+.woocommerce-pagination ul li .page-numbers.current {
+  font-weight: 700;
 }
