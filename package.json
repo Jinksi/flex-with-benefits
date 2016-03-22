@@ -1,7 +1,7 @@
 {
-  "name": "Flexxx-Boilerplate",
+  "name": "Flex-With-Benefits",
   "version": "1.0.0",
-  "description": "Flexxx Boilerplate with Sass & BrowserSync",
+  "description": "Flex Boilerplate with Sass & BrowserSync",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp"
