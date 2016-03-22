@@ -1,5 +1,4 @@
 .DS_Store
 .sass-cache
-#deploy.ini
-#git-deploy
 node_modules
+npm-debug.log
