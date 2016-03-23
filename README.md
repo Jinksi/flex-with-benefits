@@ -5,7 +5,7 @@ Benefits include:
 
 - [Gulp](http://gulpjs.com/): build system
 - [Browsersync](http://browsersync.io/): for auto browser-refreshing and syncing.
-- [Sass](http://sass-lang.com/)
+- [Sass](http://sass-lang.com/) with [Sourcemaps](https://github.com/floridoo/gulp-sourcemaps)
 - [Rucksack](http://simplaio.github.io/rucksack/) with Autoprefixer
 
 Dependencies:

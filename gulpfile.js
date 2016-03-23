@@ -2,6 +2,7 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var rucksack = require('gulp-rucksack');
+var sourcemaps = require('gulp-sourcemaps');
 var reload      = browserSync.reload;
 
 var src = {
@@ -27,6 +28,7 @@ gulp.task('serve', ['sass'], function() {
 // Compile sass into CSS
 gulp.task('sass', function() {
   return gulp.src(src.scss)
+    .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expanded'})
     .on('error', function(err){
       browserSync.notify(err.message, 3000);
@@ -35,6 +37,7 @@ gulp.task('sass', function() {
     .pipe(rucksack({
       autoprefixer: true
     }))
+    .pipe(sourcemaps.write())
     .pipe(gulp.dest(src.css))
     .pipe(reload({stream: true}));
 });
