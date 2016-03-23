@@ -37,7 +37,7 @@ gulp.task('sass', function() {
     .pipe(rucksack({
       autoprefixer: true
     }))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(src.css))
     .pipe(reload({stream: true}));
 });
