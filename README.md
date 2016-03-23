@@ -28,6 +28,7 @@ Options:
 
 Deploying with [DPLOY](https://github.com/LeanMeanFightingMachine/dploy):
 
+- Install DPLOY globally: `npm install dploy -g`
 - Add `dploy.yaml` to `.gitignore`
 - Edit the ftp credentials in `dploy.yaml`
 - Run `dploy` in terminal
