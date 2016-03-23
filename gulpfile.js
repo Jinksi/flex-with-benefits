@@ -39,7 +39,7 @@ gulp.task('sass', function() {
     }))
     .pipe(sourcemaps.write('maps'))
     .pipe(gulp.dest(src.css))
-    .pipe(reload({stream: true}));
+    .pipe(reload({stream: true, match: ['**/*.css']}));
 });
 
 gulp.task('default', ['serve']);
