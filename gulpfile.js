@@ -1,9 +1,8 @@
 var gulp        = require('gulp');
-var browserSync = require('browser-sync');
+var bs = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var rucksack = require('gulp-rucksack');
 var sourcemaps = require('gulp-sourcemaps');
-var reload      = browserSync.reload;
 
 var src = {
   scss: 'scss/**/*.scss',
@@ -15,14 +14,14 @@ var src = {
 // Static Server + watching scss/php files
 gulp.task('serve', ['sass'], function() {
 
-  browserSync({
+  bs.init({
     proxy: "localhost:8888",
     open: false
   });
 
   gulp.watch(src.scss, ['sass']);
-  gulp.watch(src.php).on('change', reload);
-  gulp.watch(src.js).on('change', reload);
+  gulp.watch(src.php).on('change', bs.reload);
+  gulp.watch(src.js).on('change', bs.reload);
 });
 
 // Compile sass into CSS
@@ -31,16 +30,15 @@ gulp.task('sass', function() {
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle: 'expanded'})
     .on('error', function(err){
-      browserSync.notify(err.message, 3000);
+      bs.notify(err.message, 3000);
       this.emit('end');
     }))
     .pipe(rucksack({
       autoprefixer: true
     }))
-    .pipe(sourcemaps.write('maps'))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(src.css))
-    .pipe(reload({stream: true, match: ['**/*.css']}));
+    .pipe(bs.stream({match: '**/*.css'}));
 });
 
 gulp.task('default', ['serve']);
-gulp.task('build', ['sass']);
