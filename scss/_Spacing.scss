@@ -5,6 +5,9 @@
 .button,
 button {
 	margin-bottom: 1rem;
+	&:last-child{
+		margin-bottom: 0;
+	}
 }
 
 input,
@@ -12,6 +15,9 @@ textarea,
 select,
 fieldset {
 	margin-bottom: 1.5rem;
+	&:last-child{
+		margin-bottom: 0;
+	}
 }
 
 pre,
@@ -24,4 +30,7 @@ ul,
 ol,
 form {
 	margin-bottom: 2.5rem;
+	&:last-child{
+		margin-bottom: 0;
+	}
 }
