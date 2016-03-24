@@ -39,6 +39,14 @@
   align-items: center;
 }
 
+.background-image{
+  position: absolute 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
 /*-- Edit  --*/
 .edit_link {
   position: fixed;
