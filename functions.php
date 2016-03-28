@@ -429,14 +429,6 @@ if ( function_exists('add_post_type_support') )
 }
 
 ///////////////////////////////////////////////////////
-// add a favicon for your admin
-function admin_favicon() {
-	echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('stylesheet_directory').'/favicon.png" />';
-}
-add_action('admin_head', 'admin_favicon');
-
-
-///////////////////////////////////////////////////////
 //Remove admin tool bar
 function my_function_admin_bar(){
     return 0;
