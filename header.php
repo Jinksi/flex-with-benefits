@@ -1,4 +1,5 @@
 <!doctype html>
+<html>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS" href="<?php bloginfo('rss2_url'); ?>">
