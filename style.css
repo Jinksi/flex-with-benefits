@@ -820,11 +820,23 @@ button {
   margin-bottom: 1rem;
 }
 
+.button:last-child,
+button:last-child {
+  margin-bottom: 0;
+}
+
 input,
 textarea,
 select,
 fieldset {
   margin-bottom: 1.5rem;
+}
+
+input:last-child,
+textarea:last-child,
+select:last-child,
+fieldset:last-child {
+  margin-bottom: 0;
 }
 
 pre,
@@ -837,6 +849,18 @@ ul,
 ol,
 form {
   margin-bottom: 2.5rem;
+}
+
+pre:last-child,
+blockquote:last-child,
+dl:last-child,
+figure:last-child,
+table:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+form:last-child {
+  margin-bottom: 0;
 }
 
 table {
@@ -954,6 +978,22 @@ h6 {
   clear: both;
 }
 
+.tacenter {
+  text-align: center;
+}
+
+.taright {
+  text-align: right;
+}
+
+.taleft {
+  text-align: left;
+}
+
+.relative {
+  position: relative;
+}
+
 .section {
   padding: 50px 0;
 }
@@ -1004,6 +1044,18 @@ h6 {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.background-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
 }
 
 /*-- Edit  --*/
