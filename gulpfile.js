@@ -11,6 +11,8 @@ var src = {
   js: '**/**/*.js'
 };
 
+var ignore = '!node_modules/**';
+
 // Static Server + watching scss/php files
 gulp.task('serve', ['sass'], function() {
 
@@ -20,8 +22,7 @@ gulp.task('serve', ['sass'], function() {
   });
 
   gulp.watch(src.scss, ['sass']);
-  gulp.watch(src.php).on('change', bs.reload);
-  gulp.watch(src.js).on('change', bs.reload);
+  gulp.watch([src.php, src.js, ignore]).on('change', bs.reload);
 });
 
 // Compile sass into CSS
