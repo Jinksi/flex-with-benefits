@@ -1,5 +1,15 @@
 <?php
 
+// based on https://gist.github.com/cosmocatalano/4544576
+function scrape_insta($username) {
+	$insta_source = file_get_contents('http://instagram.com/'.$username);
+	$shards = explode('window._sharedData = ', $insta_source);
+	$insta_json = explode(';</script>', $shards[1]);
+	$insta_array = json_decode($insta_json[0], TRUE);
+	$latest_array = $insta_array['entry_data']['ProfilePage'][0]['user']['media']['nodes'];
+	return $latest_array;
+}
+
 // Move Yoast to bottom
 add_filter( 'wpseo_metabox_prio', function() { return 'low';});
 
