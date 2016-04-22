@@ -83,6 +83,9 @@ function flex_non_cached_stylesheet(){
 	// Flickity
 	// wp_enqueue_script( 'flickity', get_bloginfo('template_directory') . '/js/flickity.pkgd.min.js');
 
+	// Magnific
+	wp_enqueue_script( 'magnific', get_bloginfo('template_directory') . '/js/magnific.min.js');
+
 	// Fastclick
 	wp_enqueue_script('fastclick', get_bloginfo('template_directory') . '/js/fastclick.js');
 
