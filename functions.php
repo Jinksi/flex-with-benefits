@@ -96,7 +96,8 @@ function flex_non_cached_stylesheet(){
     'mainjs',
     get_template_directory_uri().'/js/main.js',
     array(),
-    filemtime( get_stylesheet_directory().'/js/main.js' )
+    filemtime( get_stylesheet_directory().'/js/main.js' ),
+		true
   );
 }
 

@@ -1,4 +1,5 @@
-jQuery(document).ready(function($) {
+(function(document, window, $){
+	'use strict';
 
 	(function plusMinus(){
 		$(".plusminusbutton").click( function(){
@@ -32,4 +33,4 @@ jQuery(document).ready(function($) {
 	//Fast CLick
 	FastClick.attach(document.body);
 
-});
+})(document, window, jQuery);
