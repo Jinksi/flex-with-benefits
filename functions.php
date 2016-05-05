@@ -74,26 +74,26 @@ function flex_non_cached_stylesheet(){
   wp_enqueue_script('jquery');
 
 	// Underscores
-	// wp_enqueue_script( 'underscore', get_bloginfo('template_directory') . '/js/underscore-min.js');
-	// wp_enqueue_script( 'underscore-string', get_bloginfo('template_directory') . '/js/underscore.string-min.js');
+	// wp_enqueue_script( 'underscore', get_bloginfo('template_directory') . '/js/underscore-min.js', null, null, true);
+	// wp_enqueue_script( 'underscore-string', get_bloginfo('template_directory') . '/js/underscore.string-min.js', null, null, true);
 
 	// Imagesloaded
-	// wp_enqueue_script( 'imagesloaded', get_bloginfo('template_directory') . '/js/imagesloaded.pkgd.min.js');
+	// wp_enqueue_script( 'imagesloaded', get_bloginfo('template_directory') . '/js/imagesloaded.pkgd.min.js', null, null, true);
 
 	// Flickity
-	// wp_enqueue_script( 'flickity', get_bloginfo('template_directory') . '/js/flickity.pkgd.min.js');
+	// wp_enqueue_script( 'flickity', get_bloginfo('template_directory') . '/js/flickity.pkgd.min.js', null, null, true);
 
 	// Picturefill
-	// wp_enqueue_script('picturefill', 'https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js');
+	// wp_enqueue_script('picturefill', 'https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js', null, null, true);
 
 	// Magnific
-	wp_enqueue_script( 'magnific', get_bloginfo('template_directory') . '/js/magnific.min.js');
+	wp_enqueue_script( 'magnific', get_bloginfo('template_directory') . '/js/magnific.min.js', null, null, true);
 
 	// Fastclick
-	wp_enqueue_script('fastclick', get_bloginfo('template_directory') . '/js/fastclick.js');
+	wp_enqueue_script('fastclick', get_bloginfo('template_directory') . '/js/fastclick.js', null, null, true);
 
 	// Font Awesome
-	wp_enqueue_style( 'font-awesome', get_bloginfo('template_directory') . '/font-awesome/css/font-awesome.min.css'  );
+	wp_enqueue_style( 'font-awesome', get_bloginfo('template_directory') . '/font-awesome/css/font-awesome.min.css');
 
   wp_enqueue_script(
     'mainjs',
