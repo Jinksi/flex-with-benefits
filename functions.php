@@ -83,6 +83,9 @@ function flex_non_cached_stylesheet(){
 	// Flickity
 	// wp_enqueue_script( 'flickity', get_bloginfo('template_directory') . '/js/flickity.pkgd.min.js');
 
+	// Picturefill
+	// wp_enqueue_script('picturefill', 'https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js');
+
 	// Magnific
 	wp_enqueue_script( 'magnific', get_bloginfo('template_directory') . '/js/magnific.min.js');
 
