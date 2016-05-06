@@ -1,30 +1,12 @@
 <?php
-	
-/////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////// CSS FUNCTIONS
-	
-//CSS auto version
-add_action( 'wp_enqueue_scripts', 'woo_non_cached_css_thrive' );
-function woo_non_cached_css_thrive()
-{
-    
-    wp_enqueue_style( 
-        'woocommerce-style',
-        get_template_directory_uri().'/woocommerce-style.css',
-        array(),
-        filemtime( get_stylesheet_directory().'/woocommerce-style.css' )
-    );    
-       
-}
- 
-	
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////// WOOCOMMERCE FUNCTIONS
-	
-//remove coupons on checkout page 
+
+//remove coupons on checkout page
 remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 
-//edit “successfully added to your cart” on the Woocommerce single product page
+//edit ï¿½successfully added to your cartï¿½ on the Woocommerce single product page
 add_filter( 'wc_add_to_cart_message', 'custom_add_to_cart_message' );
 function custom_add_to_cart_message() {
 	global $woocommerce;
@@ -33,7 +15,7 @@ function custom_add_to_cart_message() {
 return $message;
 }
 
-// Remove Tabs 
+// Remove Tabs
 //removes the tabs completely, thus also removing the product description.
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
 
@@ -43,9 +25,9 @@ woocommerce_get_template( 'single-product/tabs/description.php' );
 }
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_product_description', 20 );
 
-//remove short desc	
+//remove short desc
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
-	
+
 //wc_remove_related_products
 function wc_remove_related_products( $args ) {
 	return array();
@@ -118,8 +100,8 @@ function fix_ssl_attachment_url( $url ) {
 }
 add_filter( 'wp_get_attachment_url', 'fix_ssl_attachment_url' );
 
-// Change WooCommerce ‘Ship to a different address?’ Default State
-//bryceadams.com/change-woocommerce-ship-different-address-default-state/ 
+// Change WooCommerce ï¿½Ship to a different address?ï¿½ Default State
+//bryceadams.com/change-woocommerce-ship-different-address-default-state/
 add_filter( 'woocommerce_ship_to_different_address_checked', '__return_false' );
 
 
