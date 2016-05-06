@@ -17,7 +17,7 @@ var ignore = '!node_modules/**';
 gulp.task('serve', ['sass'], function() {
 
   bs.init({
-    proxy: "localhost:8888",
+    proxy: "flex.dev", // use localhost:8888 for MAMP
     open: false
   });
 
