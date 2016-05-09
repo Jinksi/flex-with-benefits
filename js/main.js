@@ -22,7 +22,7 @@
 
 	(function clearSearchOnClick(){
 		//clear search on click
-		defaultValue = $('#Searchform').val();
+		var defaultValue = $('#Searchform').val();
 		$('#Searchform').click(function() {
 			if( this.value == defaultValue ) {
 				$(this).val("");
