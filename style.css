@@ -821,14 +821,11 @@ ul {
   padding-left: 0;
 }
 
-dl dl
-ul,
+dl dl ul,
 dl ol,
-ol dl
-ul,
+ol dl ul,
 ol ol,
-ul dl
-ul,
+ul dl ul,
 ul ol {
   font-size: 90%;
   margin: 1.5rem 0 1.5rem 3.0rem;
@@ -1315,7 +1312,7 @@ header nav ul li a {
   }
   .woocommerce table.shop_table .variation:after{
     content: '';
-    display: table;
+    display: block;
     clear: both;
   }
   .woocommerce .quantity {
@@ -1335,7 +1332,7 @@ header nav ul li a {
   }
   .woocommerce .cart-collaterals:after{
     content: '';
-    display: table;
+    display: block;
     clear: both;
   }
   .woocommerce .cart-collaterals .cart_totals {
