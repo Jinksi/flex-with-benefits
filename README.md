@@ -23,7 +23,7 @@ Wordpress theme for [Thrive Web](http://thriveweb.com.au).
 
 ### Options:
 
-- Browsersync is set to work via `localhost:8888` (MAMP) as a proxy. You can change this setting in `gulpfile.js`
+- Browsersync is set to work via `flex.dev` as a proxy. You will need to change this ( e.g. use `localhost:8888` for MAMP ). You can change this setting in `gulpfile.js`
 - Open http://localhost:3001 in your browser for more Browsersync settings
 
 ### Deploying with [DPLOY](https://github.com/LeanMeanFightingMachine/dploy):
