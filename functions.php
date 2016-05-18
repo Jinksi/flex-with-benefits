@@ -93,7 +93,7 @@ function flex_non_cached_stylesheet(){
 	wp_enqueue_script('fastclick', get_bloginfo('template_directory') . '/js/fastclick.js', null, null, true);
 
 	// Font Awesome
-	wp_enqueue_style( 'font-awesome', get_bloginfo('template_directory') . '/font-awesome/css/font-awesome.min.css');
+	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/c81fe3ea32.css');
 
   wp_enqueue_script(
     'mainjs',
