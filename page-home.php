@@ -9,11 +9,11 @@ get_header(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-	<div class="section">
+	<section class="section">
 		<div class="container skinny">
 			<?php the_content();?>
 		</div>
-	</div>
+	</section>
 
 <?php endwhile; // End the loop. Whew. ?>
 
