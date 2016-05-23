@@ -1,6 +1,14 @@
 (function(document, window, $){
 	'use strict';
 
+	// function plyrSetup(){
+	// 	plyr.setup({
+	// 		iconUrl: '/wp-content/themes/flex-with-benefits/images/plyr.svg'
+	// 	});
+	// }
+	// plyrSetup();
+
+
 	(function plusMinus(){
 		$(".plusminusbutton").click( function(){
 			var $button = $(this);
