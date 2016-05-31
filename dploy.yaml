@@ -6,6 +6,6 @@ live:
   pass: password
   check: false
   path:
-    remote: public_html/wp-content/themes/bookeo
+    remote: public_html/wp-content/themes/THEMEDIR
 
 # remember to add to gitignore before including ftp details!
