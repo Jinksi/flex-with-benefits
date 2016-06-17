@@ -1,6 +1,5 @@
-@charset "UTF-8";
 /*
-Theme Name: Flexxx Theme — Jinks Remix
+Theme Name: Flex With Benefits
 Author: Thrive web design
 Author URI: http://thriveweb.com.au/
 */
@@ -1310,7 +1309,7 @@ header nav ul li a {
   .woocommerce table.shop_table table.shop_table tbody {
     padding-top: 10px;
   }
-  .woocommerce table.shop_table .variation:after{
+  .woocommerce table.shop_table .variation:after {
     content: '';
     display: block;
     clear: both;
@@ -1330,7 +1329,7 @@ header nav ul li a {
   .woocommerce table.cart td.actions div {
     margin-bottom: 10px;
   }
-  .woocommerce .cart-collaterals:after{
+  .woocommerce .cart-collaterals:after {
     content: '';
     display: block;
     clear: both;

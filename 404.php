@@ -1,4 +1,5 @@
 <!doctype html>
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<link href='https://fonts.googleapis.com/css?family=Arvo:400,700,400italic' rel='stylesheet' type='text/css'>
@@ -51,7 +52,7 @@
 	<div class="four04-wrap">
 		<div class="four04">
 			<a class="four04-logo" href="<?php echo site_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.svg"/></a>
-			<h2>404 – Page Not Found</h2>
+			<h2>404 - Page Not Found</h2>
 			<p>We can't find the page you are looking for!<br>Head back to <a href="<?php echo site_url(); ?>"><?php echo niceurl( site_url()); ?></a></p>
 		</div>
 	</div>

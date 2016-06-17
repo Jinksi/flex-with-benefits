@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS" href="<?php bloginfo('rss2_url'); ?>">
@@ -12,8 +12,8 @@
 
 	<header class="header">
 		<div class="header-wrap container flex">
-			<a id="logo" href="<?php bloginfo('url'); ?>">
-				<img src="<?php bloginfo('template_directory'); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?> "/>
+			<a id="logo" href="<?php echo esc_url( home_url() ); ?>">
+				<img src="<?php echo esc_url( get_template_directory_uri() ); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?> "/>
 			</a>
 			<nav class="header-nav">
 				<?php wp_nav_menu(array('theme_location' => 'main', 'container' => false )); ?>
