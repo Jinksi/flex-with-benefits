@@ -25,11 +25,3 @@ Wordpress theme for [Thrive Web](http://thriveweb.com.au).
 
 - Browsersync is set to work via `flex.dev` as a proxy. You will need to change this ( e.g. use `localhost:8888` for MAMP ). You can change this setting in `gulpfile.js`
 - Open http://localhost:3001 in your browser for more Browsersync settings
-
-### Deploying with [DPLOY](https://github.com/LeanMeanFightingMachine/dploy):
-
-- Install DPLOY globally: `npm install dploy -g`
-- Add `dploy.yaml` to `.gitignore`
-- Edit the ftp credentials in `dploy.yaml`
-- Run `dploy` in terminal
-- DPLOY will upload the latest changes by comparing the version on the server with the git repository

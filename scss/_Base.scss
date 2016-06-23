@@ -1,3 +1,12 @@
+// Base
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+$font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-secondary: 'brandon-grotesque', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// Typography
+$font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
 
 // Base
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
@@ -25,4 +34,13 @@ body {
 *:after,
 *:before {
 	box-sizing: border-box;
+}
+
+a {
+	color: $color-primary;
+	text-decoration: none;
+
+	&:hover {
+		color: $color-secondary;
+	}
 }
