@@ -101,6 +101,9 @@ function theme_slug_setup() {
 }
 add_action( 'after_setup_theme', 'theme_slug_setup' );
 
+add_filter( 'gform_enable_field_label_visibility_settings', '__return_true' );
+add_filter( 'gform_confirmation_anchor', '__return_true' );
+
 ///////////////////////////////////////////////////////
 // No pingbacks for security
 // http://blog.sucuri.net/2014/03/more-than-162000-wordpress-sites-used-for-distributed-denial-of-service-attack.html
