@@ -141,7 +141,7 @@ dfn {
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-h1 {
+h1, .woocommerce-account h2, .woocommerce-account h3 {
   font-size: 2em;
   margin: 0.67em 0;
 }
@@ -947,7 +947,7 @@ p {
   margin-top: 0;
 }
 
-h1,
+h1, .woocommerce-account h2, .woocommerce-account h3,
 h2,
 h3,
 h4,
@@ -959,7 +959,7 @@ h6 {
   margin-top: 0;
 }
 
-h1 {
+h1, .woocommerce-account h2, .woocommerce-account h3 {
   font-size: 4.0rem;
   letter-spacing: -.1rem;
   line-height: 1.2;
@@ -996,7 +996,7 @@ h6 {
 }
 
 @media (min-width: 40rem) {
-  h1 {
+  h1, .woocommerce-account h2, .woocommerce-account h3 {
     font-size: 5.0rem;
   }
   h2 {
@@ -1092,15 +1092,12 @@ h6 {
 
 .flex {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -1177,11 +1174,9 @@ header .header-wrap {
 header nav ul {
   list-style: none;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: stretch;
-  -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
   margin: 0;
@@ -1425,10 +1420,60 @@ header nav ul li a {
   }
 }
 
+.woocommerce-account .woocommerce {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.woocommerce-account h2, .woocommerce-account h3 {
+  font-size: 4rem;
+  text-align: left;
+  color: #606c76;
+  margin-top: 2.5rem;
+}
+
+.woocommerce-account h3 {
+  font-size: 2.5rem;
+}
+
+.woocommerce-MyAccount-navigation {
+  width: 17rem;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.woocommerce-MyAccount-navigation ul {
+  list-style: none;
+}
+
+.woocommerce-MyAccount-content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media (max-width: 550px) {
+  .woocommerce-account .woocommerce {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .woocommerce-MyAccount-navigation {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
 .woocommerce-info, .woocommerce-thankyou-order-received, .cart-empty {
   display: block;
   -webkit-box-flex: 1;
-  -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   text-align: center;

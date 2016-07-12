@@ -1,0 +1,42 @@
+.woocommerce-account{
+  .woocommerce{
+    margin: 0 auto;
+    display: flex;
+  }
+  h2, h3{
+    @extend h1;
+    font-size: 4rem;
+    text-align: left;
+    color: $color-secondary;
+    margin-top: 2.5rem;
+  }
+  h3{
+    font-size: 2.5rem;
+  }
+}
+
+.woocommerce-MyAccount-navigation{
+  width: 17rem;
+  flex-grow: 0;
+  flex-shrink: 0;
+  ul{
+    list-style: none;
+  }
+}
+
+.woocommerce-MyAccount-content{
+  flex-grow: 1;
+}
+
+@media (max-width: 550px) {
+  .woocommerce-account{
+    .woocommerce{
+      flex-direction: column;
+    }
+  }
+  .woocommerce-MyAccount-navigation{
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
