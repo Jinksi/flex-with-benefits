@@ -665,6 +665,10 @@ input[type='radio'] {
   box-sizing: border-box;
 }
 
+.container.skinny {
+  max-width: 850px;
+}
+
 .column,
 .columns {
   width: 100%;
