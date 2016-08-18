@@ -1162,7 +1162,7 @@ h6 {
   height: 100px;
 }
 
-header {
+.header {
   height: 100px;
   padding: 15px 0;
   position: fixed;
@@ -1171,11 +1171,11 @@ header {
   width: 100%;
 }
 
-header .header-wrap {
+.header-wrap {
   height: 100%;
 }
 
-header nav ul {
+.header-nav .menu {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1186,20 +1186,20 @@ header nav ul {
   margin: 0;
 }
 
-header nav ul li {
+.header-nav .menu li {
   margin: 0;
 }
 
-header nav ul li a {
+.header-nav .menu li a {
   padding: 15px;
 }
 
-#logo {
+.logo {
   height: 100%;
   text-align: left;
 }
 
-#logo img {
+.logo img {
   height: 100%;
 }
 
