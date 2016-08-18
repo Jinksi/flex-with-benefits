@@ -1146,15 +1146,15 @@ h6 {
   font-weight: 500;
 }
 
-#social {
+.social {
   list-style: none;
 }
 
-#social li {
+.social li {
   display: inline-block;
 }
 
-#social a {
+.social a {
   padding: 5px;
 }
 
