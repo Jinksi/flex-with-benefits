@@ -177,6 +177,18 @@ function my_function_admin_bar(){
 }
 add_filter( 'show_admin_bar' , 'my_function_admin_bar');
 
+
+///////////////////////////////////////////////////////
+//Remove links from images in WYSIWYG
+function wpb_imagelink_setup() {
+	$image_set = get_option( 'image_default_link_type' );
+	
+	if ($image_set !== 'none') {
+		update_option('image_default_link_type', 'none');
+	}
+}
+add_action('admin_init', 'wpb_imagelink_setup', 10);
+
 ///////////////////////////////////////////////////////
 // Check for no robots
 add_action( 'admin_notices', 'my_admin_notice' );
