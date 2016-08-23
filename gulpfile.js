@@ -1,12 +1,13 @@
-var gulp        = require('gulp');
+var gulp = require('gulp');
 var bs = require('browser-sync').create();
-var sass        = require('gulp-sass');
+var sass = require('gulp-sass');
 var rucksack = require('gulp-rucksack');
+var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 
 var src = {
   scss: 'scss/**/*.scss',
-  css:  './',
+  css: './',
   php: '**/**/*.php',
   js: '**/**/*.js'
 };
@@ -29,17 +30,21 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function() {
   return gulp.src(src.scss)
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle: 'expanded'})
-    .on('error', function(err){
-      bs.notify(err.message, 3000);
-      this.emit('end');
+    .pipe(sass({
+        outputStyle: 'expanded'
+      })
+      .on('error', function(err) {
+        bs.notify(err.message, 3000);
+        this.emit('end');
+      }))
+    .pipe(autoprefixer({
+      browsers: ['> 1% in AU']
     }))
-    .pipe(rucksack({
-      autoprefixer: true
-    }))
+    .pipe(rucksack())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(src.css))
-    .pipe(bs.stream({match: '**/*.css'}));
+    .pipe(bs.stream({
+      match: '**/*.css'
+    }));
 });
-
 gulp.task('default', ['serve']);
