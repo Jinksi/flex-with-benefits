@@ -4,6 +4,7 @@ var sass = require('gulp-sass')
 var rucksack = require('gulp-rucksack')
 var autoprefixer = require('gulp-autoprefixer')
 var sourcemaps = require('gulp-sourcemaps')
+var gutil = require('gulp-util')
 
 var src = {
   scss: 'scss/**/*.scss',
@@ -35,6 +36,7 @@ gulp.task('sass', function() {
       })
       .on('error', function(err) {
         bs.notify(err.message, 3000)
+        gutil.log(err)
         this.emit('end')
       }))
     .pipe(autoprefixer({
