@@ -32,7 +32,7 @@ gulp.task('sass', function() {
   return gulp.src(src.scss)
     .pipe(sourcemaps.init())
     .pipe(sass({
-        outputStyle: 'expanded'
+        outputStyle: 'compact'
       })
       .on('error', function(err) {
         bs.notify(err.message, 3000)
