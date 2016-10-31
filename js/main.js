@@ -1,10 +1,9 @@
-(function(document, window, $){
-	'use strict'
-	const _padEnd = require('lodash/padEnd')
+'use strict'
 
-	console.log(_.padEnd('abc', 6, '0'))
+const FastClick = require('fastclick')
 
-	//Fast CLick
-	FastClick.attach(document.body)
+FastClick(document.body)
 
-})(document, window, jQuery)
+const _padEnd = require('lodash/padEnd')
+
+console.log(_padEnd('abc', 6, '0'))
