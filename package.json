@@ -14,7 +14,7 @@
     "browser-sync": "^2.2.0",
     "browserify": "^13.1.0",
     "eslint": "^3.4.0",
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-rucksack": "^0.1.2",
@@ -27,6 +27,8 @@
   },
   "dependencies": {
     "fastclick": "^1.0.6",
-    "lodash": "^4.16.2"
+    "lodash": "^4.16.2",
+    "plyr": "^2.0.10",
+    "webfontloader": "^1.6.26"
   }
 }
