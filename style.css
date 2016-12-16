@@ -310,7 +310,11 @@ h6 { font-size: 1.6rem; letter-spacing: 0; line-height: 1.4; }
 
 .flex { display: -webkit-flex; display: flex; -webkit-justify-content: space-between; justify-content: space-between; -webkit-align-items: center; align-items: center; }
 
-.background-image { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-position: center; background-repeat: no-repeat; background-size: cover; z-index: 0; }
+.background-image { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-position: center; background-repeat: no-repeat; background-size: cover; z-index: 0; overflow: hidden; }
+
+.background-image img { width: 100%; }
+
+@supports (object-fit: cover) { .background-image img { object-fit: cover; object-position: center; height: 100%; } }
 
 /*-- Edit  --*/
 .edit_link { position: fixed; top: 180px; left: 0; z-index: 99999; background-color: white; border: solid 1px #565656; padding: 10px 15px 10px 20px; display: inline-block; opacity: .5; font-size: 1.7rem; transition: all .2s ease; }

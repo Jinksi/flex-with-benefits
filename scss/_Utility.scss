@@ -45,6 +45,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
+  overflow: hidden;
+  img{
+    width: 100%;
+    @supports (object-fit: cover){
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+    }
+  }
 }
 
 /*-- Edit  --*/
