@@ -190,6 +190,7 @@ function custom_menu_page_removing() {
 	if($current_user->ID === 1) return; // ignore if user ID 1*
 
   remove_menu_page( 'themes.php' );
+  remove_menu_page( 'options-general.php' );
   remove_menu_page( 'customize.php' );
   remove_menu_page( 'theme-editor.php' );
   remove_menu_page( 'tools.php' );
