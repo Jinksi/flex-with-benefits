@@ -182,6 +182,59 @@ function register_custom_menu() {
 	register_nav_menu('foot', 'Footer Menu');
 }
 
+///////////////////////////////////////////////////////
+// Admin menu customisation
+
+function custom_menu_page_removing() {
+	global $current_user, $submenu, $menu;
+	if($current_user->ID === 1) return; // ignore if user ID 1*
+
+  remove_menu_page( 'themes.php' );
+  remove_menu_page( 'customize.php' );
+  remove_menu_page( 'theme-editor.php' );
+  remove_menu_page( 'tools.php' );
+  remove_menu_page( 'plugins.php' );
+  remove_menu_page( 'edit.php?post_type=acf-field-group' );
+  remove_menu_page( 'edit.php?post_type=page' );
+  remove_menu_page( 'edit-comments.php' );
+  remove_menu_page( 'index.php' );
+
+	// Move Menus
+	if(isset($submenu['themes.php'])) {
+		foreach($submenu['themes.php'] as $key => $item) {
+			if($item[2] === 'nav-menus.php') {
+				unset($submenu['themes.php'][$key]);
+			}
+		}
+	}
+	add_menu_page( __('Menus'), __('Menus'), 'delete_others_pages', 'nav-menus.php', '', 'dashicons-list-view', 61 );
+
+	// Add Pages to top of menu
+	add_menu_page( __('Pages'), __('Pages'), 'delete_others_pages', 'edit.php?post_type=page', '', 'dashicons-admin-page', 4 );
+
+}
+add_action( 'admin_menu', 'custom_menu_page_removing' );
+
+function remove_admin_bar_links() {
+  global $wp_admin_bar, $current_user;
+	if($current_user->ID === 1) return; // ignore if user ID 1
+
+  // $wp_admin_bar->remove_menu('wp-logo');          // Remove the WordPress logo
+  // $wp_admin_bar->remove_menu('about');            // Remove the about WordPress link
+  // $wp_admin_bar->remove_menu('wporg');            // Remove the WordPress.org link
+  // $wp_admin_bar->remove_menu('documentation');    // Remove the WordPress documentation link
+  $wp_admin_bar->remove_menu('support-forums');   // Remove the support forums link
+  // $wp_admin_bar->remove_menu('feedback');         // Remove the feedback link
+  // $wp_admin_bar->remove_menu('site-name');        // Remove the site name menu
+  // $wp_admin_bar->remove_menu('view-site');        // Remove the view site link
+  $wp_admin_bar->remove_menu('updates');          // Remove the updates link
+  $wp_admin_bar->remove_menu('comments');         // Remove the comments link
+  $wp_admin_bar->remove_menu('new-content');      // Remove the content link
+  $wp_admin_bar->remove_menu('my-account');       // Remove the user details tab
+  $wp_admin_bar->remove_menu('itsec_admin_bar_menu');       // iThemes
+}
+add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+
 /////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////// Woo specific Functions
 
