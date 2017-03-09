@@ -1,39 +1,7 @@
 /*
-Theme Name: Flex With Benefits
+Theme Name: xFlex
 Author: Thrive web design
 Author URI: https://thriveweb.com.au/
 */
 
-// Sass Modules
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-
-@import '_Normalize';
-@import '_Functions';
-@import '_Variables';
-@import '_Color';
-@import '_Anim';
-@import '_Base';
-@import '_Blockquote';
-@import '_Button';
-@import '_Code';
-@import '_Form';
-@import '_Grid';
-@import '_Link';
-@import '_List';
-@import '_Misc';
-@import '_Spacing';
-@import '_Table';
-@import '_Typography';
-@import '_Utility';
-
-@import "components/header";
-@import "components/footer";
-// @import "components/comments";
-// @import "components/flickity";
-@import "components/plyr";
-// @import "components/magnific";
-// @import "components/instagram-banner";
-
-@import "pages/home";
-
-// @import "woocommerce/woocommerce";
+@import '_normalize';

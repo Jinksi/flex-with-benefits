@@ -3,12 +3,12 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-	<div class="section">
-		<div class="container skinny">
+	<section class="section">
+		<div class="container">
 			<h1><?php the_title(); ?></h1>
-			<?php the_content();?>
+			<?php the_content(); ?>
 		</div>
-	</div>
+	</section>
 
 <?php endwhile; // End the loop. Whew. ?>
 

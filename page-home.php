@@ -11,7 +11,7 @@ get_header(); ?>
 
 	<section class="section">
 		<div class="container skinny">
-			<?php the_content();?>
+			<?php the_content(); ?>
 		</div>
 	</section>
 

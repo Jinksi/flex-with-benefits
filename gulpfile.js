@@ -23,8 +23,7 @@ var src = {
 var ignore = '!node_modules/**'
 
 // Static Server + watching scss/php files
-gulp.task('serve', ['sass', 'scripts'], function() {
-
+gulp.task('serve', ['sass', 'scripts'], function () {
   bs.init({
     proxy: '192.168.33.15', // use localhost:8888 for MAMP
     open: false,
@@ -38,24 +37,24 @@ gulp.task('serve', ['sass', 'scripts'], function() {
 })
 
 // Compile sass into CSS
-gulp.task('sass', function() {
+gulp.task('sass', function () {
   return gulp.src(src.scss)
     .pipe(sourcemaps.init())
     .pipe(sass({
-        outputStyle: 'compact'
+      outputStyle: 'compact'
+    })
+    .on('data', function () {
+      bs.sockets.emit('fullscreen:message:clear')
+    })
+    .on('error', function (err) {
+      bs.sockets.emit('fullscreen:message', {
+        title: err.relativePath,
+        body: err.message,
+        timeout: 100000
       })
-      .on('data', function(){
-        bs.sockets.emit('fullscreen:message:clear')
-      })
-      .on('error', function(err) {
-        bs.sockets.emit('fullscreen:message', {
-          title: err.relativePath,
-          body:  err.message,
-          timeout: 100000
-        })
-        gutil.log(err.message)
-        this.emit('end')
-      }))
+      gutil.log(err.message)
+      this.emit('end')
+    }))
     .pipe(autoprefixer({
       browsers: ['> 1% in AU']
     }))
@@ -67,21 +66,20 @@ gulp.task('sass', function() {
     }))
 })
 
-gulp.task('scripts', function() {
+gulp.task('scripts', function () {
   var b = browserify({
     entries: './js/main.js',
     debug: true,
     sourceMaps: true
   }).transform('babelify')
   return b.bundle()
-    .on('error', function(err) {
+    .on('error', function (err) {
       bs.sockets.emit('fullscreen:message', {
         title: 'JS Error',
-        body:  err.filename,
+        body: err.filename,
         timeout: 100000
       })
-      gutil.log(err.filename)
-      gutil.log(err.codeFrame)
+      gutil.log(err)
       this.emit('end')
     })
     .on('data', bs.reload)
@@ -94,7 +92,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('./js'))
 })
 
-gulp.task('scripts-watch', ['scripts'], function(done){
+gulp.task('scripts-watch', ['scripts'], function (done) {
   done()
 })
 
