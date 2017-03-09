@@ -1,4 +1,4 @@
-# Flex with benefits
+# xFlex
 Wordpress theme for [Thrive Web](http://thriveweb.com.au).
 
 ### Benefits include:
@@ -7,7 +7,7 @@ Wordpress theme for [Thrive Web](http://thriveweb.com.au).
 - [Browsersync](http://browsersync.io/): for auto browser-refreshing and syncing.
 - [Sass](http://sass-lang.com/) with [Sourcemaps](https://github.com/floridoo/gulp-sourcemaps)
 - [Rucksack](http://simplaio.github.io/rucksack/) with Autoprefixer
-- [Browserify](http://browserify.org/) & [Babel](http://babeljs.io/) for ES6 support
+- [Browserify](http://browserify.org/) & [Babel](http://babeljs.io/) for ES6 & Module support
 
 ### Dependencies:
 
