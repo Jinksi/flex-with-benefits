@@ -1,28 +1,30 @@
 {
-  "name": "Flex-With-Benefits",
+  "name": "xFlex",
   "version": "1.0.0",
-  "description": "Flex Boilerplate with Sass & BrowserSync",
+  "description": "xFlex Boilerplate with Sass & BrowserSync",
   "main": "gulpfile.js",
   "scripts": {
-    "start": "webpack --env development --watch",
-    "build": "webpack --env production"
+    "start": "gulp"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "babel-core": "^6.23.1",
-    "babel-loader": "^6.4.0",
-    "babel-preset-env": "^1.2.1",
     "babel-preset-es2015": "^6.14.0",
-    "browser-sync": "^2.18.8",
-    "browser-sync-webpack-plugin": "^1.1.4",
-    "css-loader": "^0.26.4",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.2.0",
+    "browserify": "^13.1.0",
+    "bs-fullscreen-message": "^1.1.0",
     "eslint": "^3.4.0",
-    "extract-text-webpack-plugin": "^2.1.0",
-    "node-sass": "^4.5.0",
-    "sass-loader": "^6.0.3",
-    "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rucksack": "^0.1.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
     "fastclick": "^1.0.6",

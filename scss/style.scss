@@ -30,14 +30,10 @@ Author URI: https://thriveweb.com.au/
 @import "components/footer";
 // @import "components/comments";
 // @import "components/flickity";
-// @import "components/plyr";
+@import "components/plyr";
 // @import "components/magnific";
 // @import "components/instagram-banner";
 
 @import "pages/home";
 
 // @import "woocommerce/woocommerce";
-
-body{
-  background: magenta;
-}

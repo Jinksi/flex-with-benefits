@@ -13,7 +13,6 @@ var uglify = require('gulp-uglify')
 var buffer = require('vinyl-buffer')
 var source = require('vinyl-source-stream')
 
-
 var src = {
   scss: 'scss/**/*.scss',
   css: './',
@@ -28,7 +27,9 @@ gulp.task('serve', ['sass', 'scripts'], function() {
 
   bs.init({
     proxy: '192.168.33.15', // use localhost:8888 for MAMP
-    open: false
+    open: false,
+    port: 7777,
+    plugins: ['bs-fullscreen-message']
   })
 
   gulp.watch(src.scss, ['sass'])
@@ -43,9 +44,16 @@ gulp.task('sass', function() {
     .pipe(sass({
         outputStyle: 'compact'
       })
+      .on('data', function(){
+        bs.sockets.emit('fullscreen:message:clear')
+      })
       .on('error', function(err) {
-        bs.notify(err.message, 3000)
-        gutil.log(err)
+        bs.sockets.emit('fullscreen:message', {
+          title: err.relativePath,
+          body:  err.message,
+          timeout: 100000
+        })
+        gutil.log(err.message)
         this.emit('end')
       }))
     .pipe(autoprefixer({
@@ -64,26 +72,29 @@ gulp.task('scripts', function() {
     entries: './js/main.js',
     debug: true,
     sourceMaps: true
-  }).transform('babelify', {presets: ['es2015']})
+  }).transform('babelify')
   return b.bundle()
     .on('error', function(err) {
-      gutil.log(err)
-      bs.notify(err.message, 3000)
+      bs.sockets.emit('fullscreen:message', {
+        title: 'JS Error',
+        body:  err.filename,
+        timeout: 100000
+      })
+      gutil.log(err.filename)
+      gutil.log(err.codeFrame)
       this.emit('end')
     })
+    .on('data', bs.reload)
     .pipe(source('./js/main.js'))
     .pipe(rename('main.min.js'))
     .pipe(buffer())
     .pipe(sourcemaps.init({loadMaps: true}))
-    // Uncomment for production
     // .pipe(uglify())
-    .on('error', gutil.log)
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./js'))
 })
 
 gulp.task('scripts-watch', ['scripts'], function(done){
-  bs.reload()
   done()
 })
 
