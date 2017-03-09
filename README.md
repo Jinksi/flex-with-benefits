@@ -1,6 +1,8 @@
 # xFlex
 Wordpress theme for [Thrive Web](http://thriveweb.com.au).
 
+[![Standard - JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](http://standardjs.com/)
+
 ### Benefits include:
 
 - [Gulp](http://gulpjs.com/): build system
