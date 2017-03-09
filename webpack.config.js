@@ -1,3 +1,6 @@
+var path = require('path')
+var BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+
 module.exports = {
   entry: './js/main.js',
   output: {
@@ -18,11 +21,12 @@ module.exports = {
     ]
   },
   devtool: 'cheap-eval-source-map',
-  devServer: {
-    publicPath: '/wp-content/themes/flex-with-benefits/',
-    proxy: {
-      '/': 'http://192.168.33.15',
-    },
-    overlay: true
-  }
+  plugins: [
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 5000,
+      proxy: '192.168.33.15',
+      open: false
+    })
+  ]
 }
