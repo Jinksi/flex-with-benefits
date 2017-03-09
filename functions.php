@@ -42,8 +42,8 @@ function flex_non_cached_stylesheet(){
   wp_enqueue_script(
     'mainjs',
     get_template_directory_uri().'/js/main.min.js',
-    array(),
-    filemtime( get_stylesheet_directory().'/js/main.min.js' ),
+    null,
+    null,
 		true
   );
 }

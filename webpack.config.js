@@ -19,8 +19,10 @@ module.exports = {
   },
   devtool: 'cheap-eval-source-map',
   devServer: {
+    publicPath: '/wp-content/themes/flex-with-benefits/',
     proxy: {
-      '/': 'http://flex.dev/'
-    }
+      '/': 'http://192.168.33.15',
+    },
+    overlay: true
   }
 }
