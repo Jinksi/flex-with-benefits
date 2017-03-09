@@ -1,8 +1,3 @@
-'use strict'
-
-const FastClick = require('fastclick')
-
-FastClick(document.body)
-
-require('./_fonts')
-require('./_videos')
+import './_fastclick'
+import './_fonts'
+import './_videos'
