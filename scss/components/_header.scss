@@ -1,16 +1,8 @@
-
-// Header
-// ––––––––––––––––––––––––––––––––––––––––––––––––––
-$header-height: 100px;
-
-.header-padding{
-  height: 100px;
-}
 .header{
-  height: $header-height;
-  padding: 15px 0;
-  position: fixed;
-  top:0;
+  height: 10rem;
+  padding: 1.5rem 0;
+  position: sticky;
+  top: 0;
   left: 0;
   width: 100%;
 }
@@ -22,12 +14,9 @@ $header-height: 100px;
     list-style: none;
     display: flex;
     align-items: stretch;
-    margin:0;
-    li{
-      margin:0;
-      a{
-        padding: 15px;
-      }
+    margin: 0;
+    a{
+      padding: 1.5rem;
     }
   }
 }

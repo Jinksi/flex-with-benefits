@@ -347,17 +347,13 @@ h6 { font-size: 1.6rem; letter-spacing: 0; line-height: 1.4; }
 
 .relative { position: relative; }
 
-.header-padding { height: 100px; }
-
-.header { height: 100px; padding: 15px 0; position: fixed; top: 0; left: 0; width: 100%; }
+.header { height: 10rem; padding: 1.5rem 0; position: -webkit-sticky; position: sticky; top: 0; left: 0; width: 100%; }
 
 .header-wrap { height: 100%; }
 
 .header-nav .menu { list-style: none; display: -webkit-box; display: flex; -webkit-box-align: stretch; align-items: stretch; margin: 0; }
 
-.header-nav .menu li { margin: 0; }
-
-.header-nav .menu li a { padding: 15px; }
+.header-nav .menu a { padding: 1.5rem; }
 
 .logo { height: 100%; text-align: left; }
 
