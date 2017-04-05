@@ -17,14 +17,6 @@
 			<nav class="header-nav">
 				<?php wp_nav_menu(array('theme_location' => 'main', 'container' => false )); ?>
 			</nav>
-			<?php if ( class_exists( 'WooCommerce' ) ) {?>
-				<div id="side_cart">
-					<?php global $woocommerce; ?>
-					<a class="cart-contents" href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>">
-						<i class="fa fa-shopping-cart"></i><?php echo sprintf(_n('Cart [%d]', 'Cart [%d]', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);?>
-					</a>
-				</div>
-			<?php } ?>
 		</div>
 	</header>
 	<div class="header-padding"></div>
