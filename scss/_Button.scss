@@ -3,10 +3,7 @@
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 .button,
-button,
-input[type='button'],
-input[type='reset'],
-input[type='submit'] {
+button {
 	background-color: $color-primary;
 	border: .1rem solid $color-primary;
 	border-radius: .4rem;

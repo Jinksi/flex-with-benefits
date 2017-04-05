@@ -1,4 +1,97 @@
 
+// Repeated Elements
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.section{
+  padding: 5rem 0;
+  &.thin{
+    padding: 2.5rem 0;
+  }
+  &.thick{
+    padding: 10rem 0;
+  }
+}
+
+.dark{
+  background-color: $dark-grey;
+  color: white;
+}
+.light{
+  background-color: $light-grey;
+}
+.primary{
+  background-color: $color-primary;
+}
+.white{
+  background: white;
+}
+
+.color-white{
+  color: white;
+}
+.color-primary{
+  color: $color-primary;
+}
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.background-image{
+  position: absolute 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  overflow: hidden;
+  img{
+    width: 100%;
+    @supports (object-fit: cover){
+      object-fit: cover;
+      object-position: center;
+      height: 100%;
+    }
+  }
+}
+
+/*-- Edit  --*/
+.edit_link {
+  position: fixed;
+  top: 180px;
+  left:0;
+  z-index: 99999;
+  background-color: white;
+  border: solid 1px $dark-grey;
+  padding: 10px 15px 10px 20px;
+  display: inline-block;
+  opacity: .5;
+  font-size: 1.7rem;
+  transition: all .2s ease;
+  &:hover{
+    opacity: 1;
+  }
+  a {
+    margin-left: 1em;
+    color: $dark-grey;
+    background-color: transparent !important;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+
+.social{
+  list-style: none;
+  li{
+    display: inline-block;
+  }
+  a{
+    padding: 5px;
+  }
+}
+
+
 // Utility
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 

@@ -1,14 +1,7 @@
 
 // Form
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
-
-input[type='email'],
-input[type='number'],
-input[type='password'],
-input[type='search'],
-input[type='tel'],
-input[type='text'],
-input[type='url'],
+input,
 textarea,
 select {
 	appearance: none; // Removes awkward default styles on some inputs for iOS
