@@ -56,9 +56,7 @@ gulp.task('sass', function () {
       gutil.log(err.message)
       this.emit('end')
     }))
-    .pipe(autoprefixer({
-      browsers: ['> 1% in AU']
-    }))
+    .pipe(autoprefixer())
     .pipe(rucksack())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(src.css))
