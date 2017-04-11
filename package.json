@@ -30,5 +30,6 @@
     "fastclick": "^1.0.6",
     "lodash": "^4.16.2",
     "webfontloader": "^1.6.26"
-  }
+  },
+  "browserslist": ["last 2 versions", "ie 10-11", "> 1% in AU"]
 }
