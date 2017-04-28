@@ -367,4 +367,22 @@ h6 { font-size: 1.6rem; letter-spacing: 0; line-height: 1.4; }
 
 .page-header__title, .page-header__subtitle { margin-bottom: 0; }
 
+.featured-slider img { width: 100%; height: auto; max-width: 1200px; }
+
+.featured-slider .flickity-page-dots { bottom: 10px; }
+
+.featured-slider .flickity-page-dots .dot { background: white; }
+
+.featured-slider .flickity-prev-next-button { height: 12rem; margin: 0; width: 10rem; }
+
+.featured-slider .flickity-prev-next-button svg { width: 3rem; position: absolute; }
+
+.featured-slider .flickity-prev-next-button.next { border-radius: 50% 0 0 50%; right: 0; -webkit-transform: translate(50%, -50%); transform: translate(50%, -50%); }
+
+.featured-slider .flickity-prev-next-button.next svg { left: 1.25rem; right: auto; }
+
+.featured-slider .flickity-prev-next-button.previous { border-radius: 0 50% 50% 0; left: 0; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
+
+.featured-slider .flickity-prev-next-button.previous svg { left: auto; right: 1.25rem; }
+
 /*# sourceMappingURL=style.css.map */
