@@ -6,14 +6,13 @@
 button {
 	background-color: $color-primary;
 	border: .1rem solid $color-primary;
-	border-radius: .4rem;
+	border-radius: 0;
 	box-sizing: border-box;
 	color: $color-initial;
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1.1rem;
 	font-weight: 700;
-	height: 3.8rem;
 	letter-spacing: .1rem;
 	line-height: 3.8rem;
 	padding: 0 3.0rem;
@@ -38,7 +37,7 @@ button {
 		&:focus {
 			color: $color-secondary;
 			background-color: transparent;
-			border-color: $color-secondary;
+			border-color: currentColor;
 		}
 	}
 
