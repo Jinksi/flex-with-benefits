@@ -1,29 +1,38 @@
-.header{
-  height: 10rem;
-  padding: 1.5rem 0;
+.header {
+  height: 8.4rem;
+  padding: 0.8rem 0;
   position: sticky;
   top: 0;
   left: 0;
   width: 100%;
 }
-.header-wrap{
+
+.header__wrap {
   height: 100%;
+  align-items: center;
 }
-.header-nav{
-  .menu{
+
+.header__nav {
+  .menu {
     list-style: none;
     display: flex;
     align-items: stretch;
     margin: 0;
-    a{
-      padding: 1.5rem;
-    }
+  }
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    padding: 1.5rem;
   }
 }
-.logo{
+.logo {
   height: 100%;
   text-align: left;
-  img{
+
+  img {
     height: 100%;
   }
 }

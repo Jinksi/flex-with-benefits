@@ -1,0 +1,13 @@
+.page-header {
+  text-align: center;
+  background-color: $black;
+
+  .background-image {
+    opacity: 0.6;
+  }
+}
+
+.page-header__title,
+.page-header__subtitle {
+  margin-bottom: 0;
+}
