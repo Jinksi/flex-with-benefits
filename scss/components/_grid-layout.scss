@@ -1,0 +1,45 @@
+.grid-layout--section {
+
+}
+
+.grid-layout--row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  &:nth-child(1) {
+    > *:nth-child(1) {
+      // First Row, First Item
+      flex: 2;
+    }
+  }
+
+  &:nth-child(2) {
+    // Second Row, Second Item
+    > *:nth-child(2) {
+      flex: 2;
+    }
+  }
+}
+
+.grid-layout--item {
+  flex: 1 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  text-align: center;
+  background: $dark-grey;
+  height: 30rem;
+  margin: 0.2rem;
+  position: relative;
+}
+
+.grid-layout--item--title {
+  margin-top: auto;
+  color: white;
+  background: rgba($color-primary, 0.7);
+  margin-bottom: 0;
+  padding: 1.5rem;
+}
