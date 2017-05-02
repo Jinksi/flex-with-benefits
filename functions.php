@@ -1,4 +1,5 @@
 <?php
+require_once('functions/default.php');
 require_once('functions/admin.php');
 require_once('functions/enqueue.php');
 require_once('functions/images.php');
