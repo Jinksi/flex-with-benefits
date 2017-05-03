@@ -21,5 +21,9 @@ function flex_non_cached_stylesheet(){
     null,
 		true
   );
+
+  // Font Awesome
+  wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/c81fe3ea32.css');
+
 }
 ?>
