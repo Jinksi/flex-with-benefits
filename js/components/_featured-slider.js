@@ -1,7 +1,13 @@
 import Flickity from 'flickity-imagesloaded'
 
-new Flickity('.featured-slider', {
-  wrapAround: false,
-  autoPlay: 4000,
-  imagesLoaded: true
-})
+
+export default () => {
+  const featuredSlider = document.querySelector('.features-slider')
+  if (!featuredSlider) return
+  
+  new Flickity(featuredSlider, {
+    wrapAround: false,
+    autoPlay: 4000,
+    imagesLoaded: true
+  })
+}
