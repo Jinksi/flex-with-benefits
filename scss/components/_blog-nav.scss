@@ -1,0 +1,29 @@
+.blog-nav--title {
+  margin-bottom: 1rem;
+}
+
+.blog-nav--list {
+  list-style: none;
+  display: flex;
+  text-transform: uppercase;
+  font-family: $font-family-secondary;
+  font-weight: 500;
+  justify-content: center;
+  font-size: 1.5rem;
+
+  li {
+    margin: 0 0.9rem;
+    opacity: 0.5;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &.current-cat,
+    .blog &.cat-item-all {
+      opacity: 1;
+      border-bottom: 2px solid currentColor;
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination--button {
+  display: block;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    text-transform: uppercase;
+  }
+
+  i {
+    margin: 0 1rem;
+  }
+}
+
+.pagination--numeric{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .pagination--button {
+    margin: 0 0.5rem;
+
+    &.active {
+      font-weight: 600;
+    }
+  }
+}
