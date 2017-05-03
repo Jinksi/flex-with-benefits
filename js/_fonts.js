@@ -1,7 +1,9 @@
 import WebFont from 'webfontloader'
 
-WebFont.load({
-  google: {
-    families: ['Roboto']
-  }
-})
+export default () => {
+  WebFont.load({
+    google: {
+      families: ['Roboto']
+    }
+  })
+}

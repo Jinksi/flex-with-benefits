@@ -1,3 +1,3 @@
 import FastClick from 'fastclick'
 
-FastClick(document.body)
+export default () => FastClick(document.body)
