@@ -56,3 +56,43 @@ input[type='radio'] {
 	height: 20px;
 	width: 20px;
 }
+
+.validation_error,
+.gform_confirmation_message {
+	width: 100%;
+	padding: 1rem;
+	background: white;
+	border: 1px solid $light-grey;
+	margin: 1.5rem 0;
+	font-weight: 500;
+
+	&:before{
+		content: '\f06a';
+		font-family: 'FontAwesome';
+		margin-right: 5px;
+		color: $color-primary;
+	}
+
+}
+
+.gform_confirmation_message{
+	&:before{
+		content: '\f164';
+		font-family: 'FontAwesome';
+		margin-right: 5px;
+		color: $color-primary;
+	}
+}
+
+.validation_message {
+	background: white;
+	font-weight: 500;
+	border: 1px solid $light-grey;
+
+	&:before{
+		content: '\f06a';
+		font-family: 'FontAwesome';
+		margin-right: 5px;
+		color: $color-primary;
+	}
+}

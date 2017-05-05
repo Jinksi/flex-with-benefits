@@ -189,6 +189,18 @@ input[type='checkbox'], input[type='radio'] { display: inline; }
 
 .label-inline { font-weight: normal; display: inline-block; margin-left: .5rem; }
 
+.gform_ajax_spinner { display: block; margin: 1rem auto; height: 20px; width: 20px; }
+
+.validation_error, .gform_confirmation_message { width: 100%; padding: 1rem; background: white; border: 1px solid whitesmoke; margin: 1.5rem 0; font-weight: 500; }
+
+.validation_error:before, .gform_confirmation_message:before { content: '\f06a'; font-family: 'FontAwesome'; margin-right: 5px; color: #9b4dca; }
+
+.gform_confirmation_message:before { content: '\f164'; font-family: 'FontAwesome'; margin-right: 5px; color: #9b4dca; }
+
+.validation_message { background: white; font-weight: 500; border: 1px solid whitesmoke; }
+
+.validation_message:before { content: '\f06a'; font-family: 'FontAwesome'; margin-right: 5px; color: #9b4dca; }
+
 .container { position: relative; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; box-sizing: border-box; }
 
 .container.skinny { max-width: 850px; }
