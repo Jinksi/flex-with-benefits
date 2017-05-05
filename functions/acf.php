@@ -19,12 +19,16 @@ function acf_keyboardshortcuts() { ?>
 			---
 		`)
 		document.addEventListener('keydown', (e) => {
-			if(e.key === 'Escape') {
+			if (e.key === 'Escape') {
 				document.querySelectorAll('.acf-field-object.open a[title="Close Field"]').forEach(btn => btn.click())
 			}
 			if ((e.target.nodeName === 'BODY' || e.target.nodeName === 'DIV') && e.key === 'a') {
 				const addButton = Array.from(document.querySelectorAll('.acf-hl.acf-tfoot a.add-field')).pop()
 				if (addButton) addButton.click()
+			}
+			if (e.key === 's' && e.metaKey === true) {
+				e.preventDefault()
+				document.querySelector('#publishing-action input[name="save"]').click()
 			}
 		})
 	</script>
