@@ -1,13 +1,38 @@
 <?php
+// ACF Google Maps
 $mapsKey = 'YOUR_KEY';
 function my_acf_init() {
 	acf_update_setting('google_api_key', $mapsKey);
 }
 add_action('acf/init', 'my_acf_init');
 
+// ACF Keyboard Shortcuts
+function acf_keyboardshortcuts() { ?>
+	<script type="text/javascript">
+		console.log(`
+			---
 
+			ACF keyboard shortcuts:
+			A   – new field
+			ESC – close field
+
+			---
+		`)
+		document.addEventListener('keydown', (e) => {
+			if(e.key === 'Escape') {
+				document.querySelectorAll('.acf-field-object.open a[title="Close Field"]').forEach(btn => btn.click())
+			}
+			if ((e.target.nodeName === 'BODY' || e.target.nodeName === 'DIV') && e.key === 'a') {
+				const addButton = Array.from(document.querySelectorAll('.acf-hl.acf-tfoot a.add-field')).pop()
+				if (addButton) addButton.click()
+			}
+		})
+	</script>
+<?php }
+add_action('acf/input/admin_footer', 'acf_keyboardshortcuts');
+
+// ACF Social Options
 add_action( 'init', 'socialOptions' );
-
 function socialOptions(){
   //// ACF Options Page
   if( function_exists('acf_add_options_page') ) {
