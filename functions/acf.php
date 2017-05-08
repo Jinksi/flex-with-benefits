@@ -35,6 +35,15 @@ function acf_keyboardshortcuts() { ?>
 <?php }
 add_action('acf/input/admin_footer', 'acf_keyboardshortcuts');
 
+// ACF custom field validation
+add_filter('acf/validate_value/name=text', 'my_acf_validate_value', 10, 4);
+function my_acf_validate_value($valid, $value, $field, $input) {
+	if ($valid && strlen(strip_tags($value)) > 250) {
+		$valid = 'You can\'t enter more that 250 chars';
+	}
+	return $valid;
+}
+
 // ACF Social Options
 add_action( 'init', 'socialOptions' );
 function socialOptions(){
