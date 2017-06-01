@@ -60,31 +60,6 @@
   }
 }
 
-/*-- Edit  --*/
-.edit_link {
-  position: fixed;
-  top: 180px;
-  left:0;
-  z-index: 99999;
-  background-color: white;
-  border: solid 1px $dark-grey;
-  padding: 10px 15px 10px 20px;
-  display: inline-block;
-  opacity: .5;
-  font-size: 1.7rem;
-  transition: all .2s ease;
-  &:hover{
-    opacity: 1;
-  }
-  a {
-    margin-left: 1em;
-    color: $dark-grey;
-    background-color: transparent !important;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-}
-
 .social{
   list-style: none;
   li{

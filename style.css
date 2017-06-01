@@ -330,13 +330,6 @@ h6 { font-size: 1.6rem; letter-spacing: 0; line-height: 1.4; }
 
 @supports (object-fit: cover) { .background-image img { object-fit: cover; object-position: center; height: 100%; } }
 
-/*-- Edit  --*/
-.edit_link { position: fixed; top: 180px; left: 0; z-index: 99999; background-color: white; border: solid 1px #565656; padding: 10px 15px 10px 20px; display: inline-block; opacity: .5; font-size: 1.7rem; -webkit-transition: all .2s ease; transition: all .2s ease; }
-
-.edit_link:hover { opacity: 1; }
-
-.edit_link a { margin-left: 1em; color: #565656; background-color: transparent !important; text-transform: uppercase; font-weight: 500; }
-
 .social { list-style: none; }
 
 .social li { display: inline-block; }
