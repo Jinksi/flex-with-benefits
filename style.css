@@ -354,6 +354,18 @@ h6 { font-size: 1.6rem; letter-spacing: 0; line-height: 1.4; }
 
 .relative { position: relative; }
 
+.edit_link { position: fixed; margin: 0; top: 60px; left: 10px; z-index: 99999; display: inline-block; font-size: 12px; font-weight: bold; }
+
+.edit_link i { width: 30px; height: 30px; line-height: 30px; text-align: center; background-color: #ffffff; border-radius: 30px; font-size: 15px; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
+
+.edit_link span { background-color: #ffffff; text-transform: uppercase; padding: 3px 5px; border-radius: 2px; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
+
+.edit_link a { color: #000000; background-color: transparent; }
+
+.edit_link a:hover i { background-color: #717171; color: #ffffff; }
+
+.edit_link a:hover span { background-color: #717171; color: #ffffff; }
+
 .header { height: 8.4rem; padding: 0.8rem 0; position: -webkit-sticky; position: sticky; top: 0; left: 0; width: 100%; z-index: 1; background: white; }
 
 .header__wrap { height: 100%; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }

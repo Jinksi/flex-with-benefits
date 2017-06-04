@@ -1,0 +1,48 @@
+.edit_link {
+  position: fixed;
+  margin: 0;
+  top: 60px;
+  left: 10px;
+  z-index: 99999;
+  display: inline-block;
+  font-size: 12px;
+  font-weight: bold;
+
+  i {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 30px;
+    font-size: 15px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+
+  span {
+    background-color: #ffffff;
+    text-transform: uppercase;
+    padding: 3px 5px;
+    border-radius: 2px;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+
+  a {
+    color: #000000;
+    background-color: transparent;
+
+    &:hover {
+      i {
+        background-color: rgb(113, 113, 113);
+        color: #ffffff;
+      }
+
+      span {
+        background-color: rgb(113, 113, 113);
+        color: #ffffff;
+      }
+    }
+  }
+}
