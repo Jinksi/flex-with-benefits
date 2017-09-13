@@ -17,7 +17,7 @@ var src = {
   scss: 'scss/**/*.scss',
   css: './',
   php: '**/**/*.php',
-  js: '**/**/*.js'
+  js: 'js/**/*.js'
 }
 
 var ignore = '!node_modules/**'
