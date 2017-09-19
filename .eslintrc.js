@@ -5,21 +5,17 @@ module.exports = {
   },
   "extends": "eslint:recommended",
   "rules": {
+    "no-console": ["warn"],
     "linebreak-style": [
-      "error",
-      "unix"
+      "error", "unix"
     ],
-    "no-undef": "off",
+    // "no-undef": "off",
     "quotes": [
-      "error",
-      "single"
+      "error", "single"
     ],
-    "semi": [
-      "error",
-      "never"
-    ]
+    "semi": ["error", "never"]
   },
   "parserOptions": {
     "sourceType": "module"
   }
-}
+};

@@ -1,54 +1,50 @@
-var gulp = require('gulp')
-var bs = require('browser-sync').create()
-var sass = require('gulp-sass')
-var rucksack = require('gulp-rucksack')
-var autoprefixer = require('gulp-autoprefixer')
-var sourcemaps = require('gulp-sourcemaps')
-var gutil = require('gulp-util')
+/* eslint-env node */
+const gulp = require('gulp')
+const postcss = require('gulp-postcss')
+const sourcemaps = require('gulp-sourcemaps')
+const rucksack = require('rucksack-css')
+const autoprefixer = require('autoprefixer')
+const webpack = require('webpack-stream')
+const browserSync = require('browser-sync').create()
+const sass = require('gulp-sass')
+const reload = browserSync.reload
+const gutil = require('gulp-util')
 
-// js
-var browserify = require('browserify')
-var rename = require('gulp-rename')
-var uglify = require('gulp-uglify')
-var buffer = require('vinyl-buffer')
-var source = require('vinyl-source-stream')
-
-var src = {
-  scss: 'scss/**/*.scss',
-  css: './',
-  php: '**/**/*.php',
-  js: 'js/**/*.js'
+const proxy = 'http://flex-with-benefits.dev'
+const output = 'dist/'
+const src = {
+  js: './src/js/main.js',
+  jsWatch: './src/js/**/**.js',
+  sass: './src/scss/**/**.scss',
+  php: './**/**.php'
 }
 
-var ignore = '!node_modules/**'
+gulp.task('default', ['serve'])
 
-// Static Server + watching scss/php files
-gulp.task('serve', ['sass', 'scripts'], function () {
-  bs.init({
-    proxy: '192.168.33.15', // use localhost:8888 for MAMP
+gulp.task('serve', ['sass', 'js'], function() {
+  browserSync.init({
+    proxy,
     open: false,
-    port: 7777,
-    plugins: ['bs-fullscreen-message'],
-    notify: false
+    notify: false,
+    plugins: ['bs-fullscreen-message']
   })
 
-  gulp.watch(src.scss, ['sass'])
-  gulp.watch([src.js, ignore, '!**/**.min.js'], ['scripts-watch'])
-  gulp.watch([src.php, ignore]).on('change', bs.reload)
+  gulp.watch(src.sass, ['sass'])
+  gulp.watch(src.jsWatch, ['js-watch'])
+  gulp.watch(src.php).on('change', reload)
 })
 
-// Compile sass into CSS
 gulp.task('sass', function () {
-  return gulp.src(src.scss)
+  return gulp.src(src.sass)
     .pipe(sourcemaps.init())
     .pipe(sass({
       outputStyle: 'compact'
     })
     .on('data', function () {
-      bs.sockets.emit('fullscreen:message:clear')
+      browserSync.sockets.emit('fullscreen:message:clear')
     })
     .on('error', function (err) {
-      bs.sockets.emit('fullscreen:message', {
+      browserSync.sockets.emit('fullscreen:message', {
         title: err.relativePath,
         body: err.message,
         timeout: 100000
@@ -56,43 +52,35 @@ gulp.task('sass', function () {
       gutil.log(err.message)
       this.emit('end')
     }))
-    .pipe(autoprefixer())
-    .pipe(rucksack())
+
+    .pipe(postcss([
+      rucksack(),
+      autoprefixer()
+    ]))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(src.css))
-    .pipe(bs.stream({
-      match: '**/*.css'
-    }))
+    .pipe(gulp.dest(output))
+    .pipe(reload({stream: true}))
 })
 
-gulp.task('scripts', function () {
-  var b = browserify({
-    entries: './js/main.js',
-    debug: true,
-    sourceMaps: true
-  }).transform('babelify')
-  return b.bundle()
+gulp.task('js', function () {
+  return gulp.src(src.js)
+    .pipe(
+      webpack(require('./webpack.config.js'))
+    )
     .on('error', function (err) {
-      bs.sockets.emit('fullscreen:message', {
+      browserSync.sockets.emit('fullscreen:message', {
         title: 'JS Error',
-        body: err.filename,
+        body: err,
         timeout: 100000
       })
-      gutil.log(err)
       this.emit('end')
     })
-    .on('data', bs.reload)
-    .pipe(source('./js/main.js'))
-    .pipe(rename('main.min.js'))
-    .pipe(buffer())
-    .pipe(sourcemaps.init({loadMaps: true}))
-    // .pipe(uglify())
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest('./js'))
+    .on('data', reload)
+    .pipe(gulp.dest(output))
 })
 
-gulp.task('scripts-watch', ['scripts'], function (done) {
+gulp.task('js-watch', ['js'], function (done) {
   done()
 })
 
-gulp.task('default', ['serve'])
+gulp.task('build', ['sass', 'js'])

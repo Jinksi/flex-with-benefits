@@ -1,3 +1,5 @@
+/* global jQuery google */
+
 const $ = jQuery
 
 function new_map( $el ) {
