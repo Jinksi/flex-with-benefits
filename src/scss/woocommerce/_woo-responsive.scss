@@ -1,7 +1,7 @@
 /*---- Responsive ----*/
 @media screen and (max-width: 600px) {
-  .woocommerce{
-    table{
+  .woocommerce {
+    table {
       /* Force table to not be like tables anymore */
       &.shop_table,
       &.shop_table thead,
@@ -20,27 +20,27 @@
         top: -9999px;
         left: -9999px;
       }
-      &.shop_table{
+      &.shop_table {
         border: none;
         tr {
           /*border: 1px solid #d2d3d3; */
         }
-        .order-total{
-          td{
+        .order-total {
+          td {
             padding-left: 0 !important;
             font-size: 3rem;
           }
         }
-        td{
+        td {
           /* Behave like a "row" */
           // border: 1px solid #d2d3d3;
           position: relative;
           padding-left: 40% !important;
           &.product-spacer {
-            border-color: #FFF;
+            border-color: #fff;
             height: 10px;
           }
-          &:before{
+          &:before {
             /* Now like a table header */
             position: absolute;
             /* Top/left values mimic padding */
@@ -57,18 +57,18 @@
           &.product-remove {
             text-align: right;
             padding: 5px 0;
-            &:before{
+            &:before {
               content: "DELETE";
             }
           }
-          &.product-thumbnail{
+          &.product-thumbnail {
             height: 150px;
             text-align: center;
-            a{
+            a {
               display: block;
               height: 100%;
             }
-            &:before{
+            &:before {
               content: "IMAGE";
             }
           }
@@ -99,35 +99,36 @@
         table.shop_table tbody {
           padding-top: 10px;
         }
-        .variation{
+        .variation {
           clear: fix;
         }
       }
     }
 
-    .quantity{
+    .quantity {
       margin: 0;
     }
 
-    table.cart td.actions{
+    table.cart td.actions {
       text-align: left;
       border: 0;
       padding-left: 0 !important;
-      .button.alt{
+      .button.alt {
         float: left;
         margin-top: 10px;
       }
-      div{
+      div {
         margin-bottom: 10px;
       }
     }
-    .cart-collaterals{
+    .cart-collaterals {
       clear: fix;
       .cart_totals {
         float: left;
         width: 100%;
         text-align: left;
-        th, td {
+        th,
+        td {
           border: 0 !important;
         }
         table tr.cart-subtotal td,

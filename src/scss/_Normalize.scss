@@ -30,16 +30,17 @@ body {
 
 article,
 aside,
-details, /* 1 */
-figcaption,
+details,
+/* 1 */ figcaption,
 figure,
 footer,
 header,
-main, /* 2 */
-menu,
+main,
+/* 2 */ menu,
 nav,
 section,
-summary { /* 1 */
+summary {
+  /* 1 */
   display: block;
 }
 
@@ -76,8 +77,8 @@ progress {
  * 1. Add the correct display in IE.
  */
 
-template, /* 1 */
-[hidden] {
+template,
+/* 1 */ [hidden] {
   display: none;
 }
 
@@ -273,8 +274,9 @@ optgroup {
  */
 
 button,
-input, /* 1 */
-select { /* 2 */
+input,
+/* 1 */ select {
+  /* 2 */
   overflow: visible;
 }
 
@@ -286,7 +288,8 @@ select { /* 2 */
 button,
 input,
 select,
-textarea { /* 1 */
+textarea {
+  /* 1 */
   margin: 0;
 }
 
@@ -296,7 +299,8 @@ textarea { /* 1 */
  */
 
 button,
-select { /* 1 */
+select {
+  /* 1 */
   text-transform: none;
 }
 
@@ -326,8 +330,8 @@ button,
  */
 
 button,
-html [type="button"], /* 1 */
-[type="reset"],
+html [type="button"],
+/* 1 */ [type="reset"],
 [type="submit"] {
   -webkit-appearance: button; /* 2 */
 }

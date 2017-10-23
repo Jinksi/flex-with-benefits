@@ -1,30 +1,30 @@
 $height: 15rem;
 
-.instagram-banner--section{
+.instagram-banner--section {
   text-align: center;
 }
 
-.instagram-banner--row{
+.instagram-banner--row {
   height: $height;
   overflow: hidden;
 }
 
-.instagram-banner--title{
+.instagram-banner--title {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 1.8rem;
   color: $color-primary;
 
-  i{
+  i {
     font-size: 2em;
     vertical-align: middle;
   }
 }
 
-.instagram-banner--item{
+.instagram-banner--item {
   height: $height;
   display: inline-block;
-  img{
+  img {
     height: 100%;
     width: auto;
     display: block;

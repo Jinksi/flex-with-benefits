@@ -1,58 +1,57 @@
-
 // Repeated Elements
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-.section{
+.section {
   padding: 5rem 0;
-  &.thin{
+  &.thin {
     padding: 2.5rem 0;
   }
-  &.thick{
+  &.thick {
     padding: 10rem 0;
   }
 }
 
-.dark{
+.dark {
   background-color: $dark-grey;
   color: white;
 }
-.black{
+.black {
   background-color: $black;
   color: white;
 }
-.light{
+.light {
   background-color: $light-grey;
 }
-.primary{
+.primary {
   background-color: $color-primary;
 }
-.white{
+.white {
   background: white;
 }
 
-.color-white{
+.color-white {
   color: white;
 }
-.color-primary{
+.color-primary {
   color: $color-primary;
 }
 
-.flex{
+.flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.background-image{
+.background-image {
   position: absolute 0;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
   overflow: hidden;
-  img{
+  img {
     width: 100%;
-    @supports (object-fit: cover){
+    @supports (object-fit: cover) {
       object-fit: cover;
       object-position: center;
       height: 100%;
@@ -60,54 +59,53 @@
   }
 }
 
-.social{
+.social {
   list-style: none;
-  li{
+  li {
     display: inline-block;
   }
-  a{
+  a {
     padding: 5px;
   }
 }
-
 
 // Utility
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Float either direction
 .float-right {
-	float: right;
+  float: right;
 }
 
 .float-left {
-	float: left;
+  float: left;
 }
 
 // Clear a float with .clearfix
 .clearfix {
-	*zoom: 1;
+  *zoom: 1;
 
-	&:after,
-	&:before {
-		content: '';
-		display: table;
-	}
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+  }
 
-	&:after {
-		clear: both;
-	}
+  &:after {
+    clear: both;
+  }
 }
 
-.tacenter{
-	text-align: center;
+.tacenter {
+  text-align: center;
 }
-.taright{
-	text-align: right;
+.taright {
+  text-align: right;
 }
-.taleft{
-	text-align: left;
+.taleft {
+  text-align: left;
 }
 
-.relative{
-	position: relative;
+.relative {
+  position: relative;
 }
