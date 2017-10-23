@@ -2,7 +2,7 @@
 
 const $ = jQuery
 
-function new_map ($el) {
+function newMap ($el) {
   const $markers = $el.find('.marker')
   const args = {
     zoom: 16,
@@ -15,13 +15,13 @@ function new_map ($el) {
   const map = new google.maps.Map($el[0], args)
   map.markers = []
   $markers.each(function () {
-    add_marker($(this), map)
+    addMarker($(this), map)
   })
-  center_map(map)
+  centerMap(map)
   return map
 }
 
-function add_marker ($marker, map) {
+function addMarker ($marker, map) {
   const latlng = new google.maps.LatLng(
     $marker.attr('data-lat'),
     $marker.attr('data-lng')
@@ -41,7 +41,7 @@ function add_marker ($marker, map) {
   }
 }
 
-function center_map (map) {
+function centerMap (map) {
   const bounds = new google.maps.LatLngBounds()
   $.each(map.markers, function (i, marker) {
     const latlng = new google.maps.LatLng(
@@ -60,6 +60,6 @@ function center_map (map) {
 
 export default () => {
   $('.acf-map').each(function () {
-    new_map($(this))
+    newMap($(this))
   })
 }

@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: 'standard',
+  extends: ['eslint:recommended', 'standard'],
   rules: {
     'no-console': ['warn'],
     'linebreak-style': ['error', 'unix'],
