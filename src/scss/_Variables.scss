@@ -1,26 +1,21 @@
 // Base
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-$font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-secondary: "brandon-grotesque", "Helvetica Neue", Helvetica, Arial,
+$font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+  'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
   sans-serif;
-$font-family-system: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
-  "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
+$font-family-secondary: 'brandon-grotesque', $font-family-system;
+$font-family: 'Roboto', $font-family-system;
 
 // Variables
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 
 // Breakpoints
-$bp-larger-than-mobile: "min-width: 400px" !default;
-$bp-larger-than-phablet: "min-width: 550px" !default;
-$bp-larger-than-tablet: "min-width: 750px" !default;
-$bp-larger-than-desktop: "min-width: 1000px" !default;
-$bp-larger-than-desktophd: "min-width: 1200px" !default;
-
-// Typography
-$font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
-  sans-serif !default;
+$bp-larger-than-mobile: 'min-width: 400px' !default;
+$bp-larger-than-phablet: 'min-width: 550px' !default;
+$bp-larger-than-tablet: 'min-width: 750px' !default;
+$bp-larger-than-desktop: 'min-width: 1000px' !default;
+$bp-larger-than-desktophd: 'min-width: 1200px' !default;
 
 //Grid Variables
 $container-width: 1200px !default;
