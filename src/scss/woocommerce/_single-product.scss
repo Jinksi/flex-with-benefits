@@ -1,0 +1,7 @@
+.single-product {
+  .product {
+    & > * {
+      width: 100%;
+    }
+  }
+}

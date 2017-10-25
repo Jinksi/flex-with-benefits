@@ -1,5 +1,6 @@
-@import "woo-responsive.scss";
-@import "account.scss";
+@import './woo-responsive';
+@import './account';
+@import './single-product';
 
 .woocommerce-info {
   display: block;
@@ -9,8 +10,8 @@
   background-color: $light-grey;
 
   &:before {
-    content: "\f05a ";
-    font-family: "FontAwesome";
+    content: '\f05a ';
+    font-family: 'FontAwesome';
     font-size: 3rem;
     margin-right: 1rem;
     vertical-align: middle;
@@ -40,8 +41,8 @@
     max-width: 300px;
     margin: 0.5rem auto;
     &:before {
-      content: "\f06a";
-      font-family: "FontAwesome";
+      content: '\f06a';
+      font-family: 'FontAwesome';
       margin-right: 0.5em;
     }
   }
