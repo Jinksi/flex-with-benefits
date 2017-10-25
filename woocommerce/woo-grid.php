@@ -7,7 +7,7 @@
   <?php if ( have_posts() ) : ?>
     <div class="flex woo-products">
       <?php while ( have_posts() ) : the_post(); ?>
-        <?php get_template_part( './components/card-product' ); ?>
+        <?php wc_get_template_part( 'woo', 'product-card' ); ?>
       <?php endwhile; ?>
     </div>
     <?php do_action( 'woo_custom_pagination' ); ?>
