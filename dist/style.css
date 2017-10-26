@@ -442,6 +442,20 @@ h6 { font-size: 1.6rem; letter-spacing: 0; line-height: 1.4; }
 
 .blog-nav--list li.current-cat, .blog .blog-nav--list li.cat-item-all { opacity: 1; border-bottom: 2px solid currentColor; }
 
+.accordion--item { padding: 1.5rem 0; border-top: 1px solid whitesmoke; }
+
+.accordion--item--title { text-transform: uppercase; color: inherit; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; font-weight: 500; letter-spacing: 0.1em; }
+
+.accordion--item--title > * { margin: 0; }
+
+.accordion--item--title:after { content: '\f107'; color: rgba(0, 0, 0, 0.3); font-family: 'fontawesome'; margin-left: auto; font-size: 2em; line-height: 1; }
+
+.open .accordion--item--title:after { content: '\f106'; }
+
+.accordion--item--content { display: none; padding: 1.5rem; -webkit-animation: fadeIn 0.3s ease-in-out; animation: fadeIn 0.3s ease-in-out; }
+
+.open .accordion--item--content { display: block; }
+
 .blog-list--container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
 .single-post { background: whitesmoke; }

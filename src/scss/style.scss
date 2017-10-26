@@ -7,33 +7,34 @@ Author URI: https://thriveweb.com.au/
 // Sass Modules
 // ––––––––––––––––––––––––––––––––––––––––––––––––––
 
-@import "_Normalize";
-@import "_Functions";
-@import "_Variables";
-@import "_Color";
-@import "_Anim";
-@import "_Base";
-@import "_Blockquote";
-@import "_Button";
-@import "_Code";
-@import "_Form";
-@import "_Grid";
-@import "_Link";
-@import "_List";
-@import "_Misc";
-@import "_Spacing";
-@import "_Table";
-@import "_Typography";
-@import "_Utility";
+@import '_Normalize';
+@import '_Functions';
+@import '_Variables';
+@import '_Color';
+@import '_Anim';
+@import '_Base';
+@import '_Blockquote';
+@import '_Button';
+@import '_Code';
+@import '_Form';
+@import '_Grid';
+@import '_Link';
+@import '_List';
+@import '_Misc';
+@import '_Spacing';
+@import '_Table';
+@import '_Typography';
+@import '_Utility';
 
-@import "components/edit";
-@import "components/header";
-@import "components/footer";
-@import "components/page-header";
-@import "components/pagination";
-@import "components/share";
-@import "components/blog-item";
-@import "components/blog-nav";
+@import 'components/edit';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/page-header';
+@import 'components/pagination';
+@import 'components/share';
+@import 'components/blog-item';
+@import 'components/blog-nav';
+@import 'components/accordion';
 // @import "components/map";
 // @import "components/featured-slider";
 // @import "components/grid-layout";
@@ -43,8 +44,8 @@ Author URI: https://thriveweb.com.au/
 // @import "components/magnific";
 // @import "components/instagram-banner";
 
-@import "pages/home";
-@import "pages/blog";
-@import "pages/single-post";
+@import 'pages/home';
+@import 'pages/blog';
+@import 'pages/single-post';
 
 // @import "woocommerce/woocommerce";
