@@ -1,5 +1,6 @@
 <?php
 require_once('functions/Debug.php');
+require_once('functions/components.php');
 require_once('functions/default.php');
 require_once('functions/admin.php');
 require_once('functions/enqueue.php');
@@ -8,7 +9,7 @@ require_once('functions/images.php');
 // require_once('functions/yoast.php');
 // require_once('functions/cpt.php');
 require_once('functions/pagination.php');
-require_once('functions/components.php');
+require_once('functions/acf.php');
 
 Debug::init();
 ?>

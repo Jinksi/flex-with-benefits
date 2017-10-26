@@ -330,19 +330,13 @@ h6 { font-size: 1.6rem; letter-spacing: 0; line-height: 1.4; }
 
 @supports ((-o-object-fit: cover) or (object-fit: cover)) { .background-image img { -o-object-fit: cover; object-fit: cover; -o-object-position: center; object-position: center; height: 100%; } }
 
-.social { list-style: none; }
-
-.social li { display: inline-block; }
-
-.social a { padding: 5px; }
-
 .float-right { float: right; }
 
 .float-left { float: left; }
 
 .clearfix { *zoom: 1; }
 
-.clearfix:after, .clearfix:before { content: ""; display: table; }
+.clearfix:after, .clearfix:before { content: ''; display: table; }
 
 .clearfix:after { clear: both; }
 
@@ -359,6 +353,10 @@ h6 { font-size: 1.6rem; letter-spacing: 0; line-height: 1.4; }
 .PageHeader .background-image { opacity: 0.6; }
 
 .PageHeader--title, .PageHeader--subtitle { margin-bottom: 0; }
+
+.SocialList { list-style: none; margin: 0; padding: 0; display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+.SocialList--item a { padding: 5px; }
 
 .edit_link { position: fixed; margin: 0; top: 60px; left: 10px; z-index: 99999; display: inline-block; font-size: 12px; font-weight: bold; }
 
