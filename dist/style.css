@@ -354,6 +354,12 @@ h6 { font-size: 1.6rem; letter-spacing: 0; line-height: 1.4; }
 
 .relative { position: relative; }
 
+.PageHeader { text-align: center; background-color: #1a1a1a; }
+
+.PageHeader .background-image { opacity: 0.6; }
+
+.PageHeader--title, .PageHeader--subtitle { margin-bottom: 0; }
+
 .edit_link { position: fixed; margin: 0; top: 60px; left: 10px; z-index: 99999; display: inline-block; font-size: 12px; font-weight: bold; }
 
 .edit_link i { width: 30px; height: 30px; line-height: 30px; text-align: center; background-color: #ffffff; border-radius: 30px; font-size: 15px; -webkit-transition: all 0.2s ease; transition: all 0.2s ease; }
@@ -381,12 +387,6 @@ h6 { font-size: 1.6rem; letter-spacing: 0; line-height: 1.4; }
 .logo img { height: 100%; }
 
 .footer { background: white; }
-
-.page-header { text-align: center; background-color: #1a1a1a; }
-
-.page-header .background-image { opacity: 0.6; }
-
-.page-header--title, .page-header--subtitle { margin-bottom: 0; }
 
 .pagination { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
 

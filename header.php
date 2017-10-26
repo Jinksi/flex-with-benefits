@@ -1,3 +1,5 @@
+<?php import('/components/PageHeader.php'); ?>
+
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -20,4 +22,6 @@
 		</div>
 	</header>
 
-	<?php get_template_part( 'components/page-header' ); ?>
+	<?php PageHeader::render([
+		'title' => get_the_title()
+	]); ?>

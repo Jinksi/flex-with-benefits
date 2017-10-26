@@ -26,10 +26,11 @@ Author URI: https://thriveweb.com.au/
 @import '_Typography';
 @import '_Utility';
 
+@import 'components/PageHeader';
+
 @import 'components/edit';
 @import 'components/header';
 @import 'components/footer';
-@import 'components/page-header';
 @import 'components/pagination';
 @import 'components/share';
 @import 'components/blog-item';
