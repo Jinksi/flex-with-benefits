@@ -1,4 +1,10 @@
 <?php
+function cl ($data) {
+  echo '<script>';
+  echo 'console.log('. json_encode(  $data ) .')';
+  echo '</script>';
+}
+
 class Debug {
   const QUIT = '/*/**/**\\*\\';
   const MODE_PRINT = 1;
