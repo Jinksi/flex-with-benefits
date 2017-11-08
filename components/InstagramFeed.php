@@ -38,7 +38,7 @@ class InstagramFeed {
       <?php if($props['renderTitle']): ?>
     		<a class="<?= $classNamePrefix; ?>--link" href="https://instagram.com/<?= $props['username']; ?>">
           <h4 class="<?= $classNamePrefix; ?>--title">
-            <i class="fa fa-instagram"></i> Instagram
+            <i class="fa fa-instagram"></i> <?= $props['username']; ?>
           </h4>
         </a>
       <?php endif; ?>
