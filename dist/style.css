@@ -454,6 +454,18 @@ h6 { font-size: 1.6rem; letter-spacing: 0; line-height: 1.4; }
 
 .open .accordion--item--content { display: block; }
 
+.InstagramFeed { text-align: center; }
+
+.InstagramFeed--row { height: 15rem; overflow: hidden; }
+
+.InstagramFeed--title { text-transform: uppercase; letter-spacing: 0.1em; font-size: 1.8rem; color: #9b4dca; }
+
+.InstagramFeed--title i { font-size: 2em; vertical-align: middle; }
+
+.InstagramFeed--item { height: 15rem; display: inline-block; }
+
+.InstagramFeed--item img { height: 100%; width: auto; display: block; }
+
 .blog-list--container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: stretch; -ms-flex-align: stretch; align-items: stretch; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
 .single-post { background: whitesmoke; }

@@ -1,15 +1,15 @@
 $height: 15rem;
 
-.instagram-banner--section {
+.InstagramFeed {
   text-align: center;
 }
 
-.instagram-banner--row {
+.InstagramFeed--row {
   height: $height;
   overflow: hidden;
 }
 
-.instagram-banner--title {
+.InstagramFeed--title {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 1.8rem;
@@ -21,7 +21,7 @@ $height: 15rem;
   }
 }
 
-.instagram-banner--item {
+.InstagramFeed--item {
   height: $height;
   display: inline-block;
   img {
