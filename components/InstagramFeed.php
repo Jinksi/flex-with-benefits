@@ -18,7 +18,7 @@ class InstagramFeed {
   }
 
 	static function scrapeInstagram($username) {
-		$cache = new Cache(WP_CONTENT_DIR . '/cache');
+		$cache = new InstagramCache(WP_CONTENT_DIR . '/instagram-cache');
 		if (!($insta_source = $cache->get('insta_source'))) {
 			$insta_source = file_get_contents(self::instagramSourceUrl($username));
 			$cache->set('insta_source', $insta_source);
@@ -38,7 +38,7 @@ class InstagramFeed {
       <?php if($props['renderTitle']): ?>
     		<a class="<?= $classNamePrefix; ?>--link" href="https://instagram.com/<?= $props['username']; ?>">
           <h4 class="<?= $classNamePrefix; ?>--title">
-            <i class="fa fa-instagram"></i> <?= $props['username']; ?>
+            <i class="fa fa-instagram"></i> Instagram
           </h4>
         </a>
       <?php endif; ?>
@@ -68,7 +68,7 @@ class InstagramFeed {
   }
 }
 
-class Cache {
+class InstagramCache {
   function __construct($dir) {
     $this->dir = $dir;
     if (!file_exists($this->dir)) {
