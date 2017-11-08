@@ -1,5 +1,5 @@
 <?php
-import('/components/SocialList.php');
+import('components/SocialList.php');
 SocialList::acf();
 
 // ACF Google Maps

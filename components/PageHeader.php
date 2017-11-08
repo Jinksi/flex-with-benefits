@@ -1,5 +1,5 @@
 <?php
-import('/components/BackgroundImage.php');
+import('components/BackgroundImage.php');
 
 class PageHeader {
   static $defaultProps = array(

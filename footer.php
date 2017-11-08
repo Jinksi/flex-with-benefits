@@ -1,5 +1,5 @@
-<?php import('/components/SocialList.php'); ?>
-<?php import('/components/InstagramFeed.php'); ?>
+<?php import('components/SocialList.php'); ?>
+<?php import('components/InstagramFeed.php'); ?>
 
 <footer class="footer section">
 	<div class="container">
