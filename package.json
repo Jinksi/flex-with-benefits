@@ -38,6 +38,7 @@
   },
   "dependencies": {
     "flickity-imagesloaded": "^2.0.0",
+    "intersection-observer": "^0.4.2",
     "lodash": "^4.16.2",
     "webfontloader": "^1.6.26"
   },
