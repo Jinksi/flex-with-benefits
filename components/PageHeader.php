@@ -16,7 +16,8 @@ class PageHeader {
         <?php $img = $props['image']; ?>
         <?php $imgUrl = $img ? $img['sizes']['1800w'] : $props['imageUrl']; ?>
         <?php BackgroundImage::render([
-          'imageUrl' => $imgUrl
+          'imageUrl' => $imgUrl,
+          'lazy' => true
         ]); ?>
         <div class="container skinny">
           <h1 class="PageHeader--title"><?= $props['title']; ?></h1>
