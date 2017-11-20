@@ -14,7 +14,7 @@ class InstagramFeed {
   }
 
   static function instagramSourceUrl($username) {
-    return 'http://instagram.com/' . $username . '/?__a=1';
+    return 'http://instagram.thrivex.io/' . $username;
   }
 
 	static function scrapeInstagram($username) {
@@ -24,7 +24,7 @@ class InstagramFeed {
 			$cache->set('insta_source', $insta_source);
 		}
 		$insta_array = json_decode($insta_source, TRUE);
-		return $insta_array['user']['media']['nodes'];
+		return $insta_array;
 	}
 
   public static function render(array $args = []) {
