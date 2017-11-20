@@ -24,7 +24,11 @@ class InstagramFeed {
 			$cache->set('insta_source', $insta_source);
 		}
 		$insta_array = json_decode($insta_source, TRUE);
+<<<<<<< HEAD
 		return $insta_array['items'];
+=======
+		return $insta_array;
+>>>>>>> 82b55504d31c92f7935fd07bf9e7179ed0cd7162
 	}
 
   public static function render(array $args = []) {
