@@ -13,7 +13,7 @@ class SocialList {
     ]
   ];
 
-  public static function render (array ...$args) {
+  public static function render (array $args = []) {
     $props = array_merge(self::$defaultProps, $args);
     ob_start(); ?>
     <ul class="SocialList">
